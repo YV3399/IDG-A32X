@@ -1,9 +1,7 @@
 # Airbus A3XX FBW/Flight Control Computer System
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 # If All ELACs Fail, Alternate Law
 
@@ -210,11 +208,8 @@ var update_loop = func {
 		if (getprop("/it-fbw/protections/overspeed") != 1) {
 			setprop("/it-fbw/protections/overspeed", 1);
 		}
-		if (getprop("/it-autoflight/output/ap1") == 1) {
-			setprop("/it-autoflight/input/ap1", 0);
-		}
-		if (getprop("/it-autoflight/output/ap2") == 1) {
-			setprop("/it-autoflight/input/ap2", 0);
+		if (getprop("/it-autoflight/input/ap1") == 1 or getprop("/it-autoflight/input/ap2") == 1) {
+			libraries.apOff("hard", 0);
 		}
 	} else {
 		if (getprop("/it-fbw/protections/overspeed") != 0) {
@@ -277,11 +272,8 @@ var fbw_loop = func {
 	}
 	
 	if (getprop("/it-fbw/law") != 0) {
-		if (getprop("/it-autoflight/output/ap1") == 1) {
-			setprop("/it-autoflight/input/ap1", 0);
-		}
-		if (getprop("/it-autoflight/output/ap2") == 1) {
-			setprop("/it-autoflight/input/ap2", 0);
+		if (getprop("/it-autoflight/output/ap1") == 1 or getprop("/it-autoflight/output/ap2") == 1) {
+			libraries.apOff("hard", 0);
 		}
 	}
 }

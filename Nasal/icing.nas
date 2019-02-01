@@ -1,9 +1,7 @@
 # A3XX Icing System
 # Jonathan Redpath (legoboyvdlp)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var dewpoint = 0;
 var temperature = 0;
@@ -235,10 +233,10 @@ var icingModel = func {
 		}
 	}
 	
-	if ((getprop("/systems/electrical/bus/dc1") == 0 or getprop("/systems/electrical/bus/dc2") == 0) and getprop("/fdm/jsbsim/position/wow") == 0) {
-		setprop("/controls/switches/leng", 1);
-		setprop("/controls/switches/reng", 1);
-	}
+	# if ((getprop("/systems/electrical/bus/dc1") == 0 or getprop("/systems/electrical/bus/dc2") == 0) and getprop("/fdm/jsbsim/position/wow") == 0) {
+	#	setprop("/controls/switches/leng", 1);
+	#	setprop("/controls/switches/reng", 1);
+	# }
 	
 	if (getprop("/systems/electrical/bus/dc-ess-shed") == 0) {
 		setprop("/controls/switches/wing", 0);

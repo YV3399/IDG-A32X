@@ -1,15 +1,21 @@
 # A320 Main Libraries
 # Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 print("-----------------------------------------------------------------------------");
-print("Copyright (c) 2017-2018 Joshua Davidson (it0uchpods)");
+print("Copyright (c) 2016-2019 Joshua Davidson (it0uchpods)");
 print("-----------------------------------------------------------------------------");
 
 setprop("/sim/replay/was-active", 0);
+
+setprop("/sim/menubar/default/menu[0]/item[0]/enabled", 0);
+setprop("/sim/menubar/default/menu[2]/item[0]/enabled", 0);
+setprop("/sim/menubar/default/menu[2]/item[2]/enabled", 0);
+setprop("/sim/menubar/default/menu[3]/enabled", 0);
+setprop("/sim/menubar/default/menu[5]/item[9]/enabled", 0);
+setprop("/sim/menubar/default/menu[5]/item[10]/enabled", 0);
+setprop("/sim/menubar/default/menu[5]/item[11]/enabled", 0);
 
 # Dimmers
 setprop("/controls/lighting/ndl-norm", 1);
@@ -41,6 +47,7 @@ var strobe = aircraft.light.new("/sim/model/lights/strobe", [0.05, 0.06, 0.05, 1
 var tail_strobe = aircraft.light.new("/sim/model/lights/tailstrobe", [0.1, 1], "/controls/lighting/strobe");
 var logo_lights = getprop("/sim/model/lights/logo-lights");
 var nav_lights = props.globals.getNode("/sim/model/lights/nav-lights");
+var dome_light = props.globals.initNode("/sim/model/lights/dome-light", 0.0, "DOUBLE");
 var wow = getprop("/gear/gear[2]/wow");
 var slats = getprop("/controls/flight/slats");
 var gear = getprop("/gear/gear[0]/position-norm");
@@ -50,6 +57,7 @@ var right_turnoff_light = props.globals.getNode("/controls/lighting/rightturnoff
 var settingT = getprop("/controls/lighting/taxi-light-switch");
 var settingTurnoff = getprop("/controls/lighting/turnoff-light-switch");
 var setting = getprop("/controls/lighting/nav-lights-switch");
+var domeSetting = getprop("/controls/lighting/dome-norm");
 var landl = getprop("/controls/lighting/landing-lights[1]");
 var landr = getprop("/controls/lighting/landing-lights[2]");
 
@@ -193,6 +201,7 @@ var systemsInit = func {
 	libraries.variousReset();
 	rmp.init();
 	acp.init();
+	ecam.ECAM_controller.init();
 }
 
 setlistener("/sim/signals/fdm-initialized", func {
@@ -208,7 +217,6 @@ var systemsLoop = maketimer(0.1, func {
 	libraries.ECAM.loop();
 	libraries.BUTTONS.update();
 	fadec.FADEC.loop();
-#	ecam.ECAM_controller.loop();
 	rmp.rmpUpdate();
 	
 	if ((getprop("/controls/pneumatic/switches/groundair") or getprop("/controls/switches/cart")) and ((getprop("/velocities/groundspeed-kt") > 2) or getprop("/controls/gear/brake-parking") == 0)) {
@@ -270,7 +278,7 @@ setlistener("/options/steep-ils", func {
 
 canvas.Text._lastText = canvas.Text["_lastText"];
 canvas.Text.setText = func(text) {
-	if (text == me._lastText) {return me;}
+	if (text == me._lastText and text != nil and size(text) == size(me._lastText)) {return me;}
 	me._lastText = text;
 	me.set("text", typeof(text) == 'scalar' ? text : "");
 };
@@ -461,6 +469,7 @@ var lightsLoop = maketimer(0.2, func {
 	gear = getprop("/gear/gear[0]/position-norm");
 	nose_lights = getprop("/sim/model/lights/nose-lights");
 	settingT = getprop("/controls/lighting/taxi-light-switch");
+	domeSetting = getprop("/controls/lighting/dome-norm");
 	
 	# nose lights
 	
@@ -520,6 +529,14 @@ var lightsLoop = maketimer(0.2, func {
 		nav_lights.setBoolValue(0);
 	}
 	
+	if (domeSetting == 0.5 and getprop("/systems/electrical/bus/dc-ess") > 0) {
+		dome_light.setValue(0.5);
+	} elsif (domeSetting == 1 and getprop("/systems/electrical/bus/dc-ess") > 0) {
+		dome_light.setValue(1);
+	} else {
+		dome_light.setValue(0);
+	}
+	
 	# strobe
 	strobe_sw = strobe_switch.getValue();
 	
@@ -552,7 +569,7 @@ var lightsLoop = maketimer(0.2, func {
 			if (getprop("/controls/lighting/no-smoking-sign") == 0) {
 				setprop("/controls/lighting/no-smoking-sign", 1);
 			}
-		} elsif (getprop("controls/switches/no-smoking-sign") == 0.5 and getprop("gear/gear[0]/position-norm") != 0) {
+		} elsif (getprop("controls/switches/no-smoking-sign") == 0.5 and getprop("gear/gear[0]/position-norm") != 0) { # todo: should be when uplocks not engaged
 			if (getprop("/controls/lighting/no-smoking-sign") == 0) {
 				setprop("/controls/lighting/no-smoking-sign", 1);
 			}

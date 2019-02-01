@@ -1,9 +1,7 @@
 # A3XX Fire System
 # Jonathan Redpath
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 #############
 # Init Vars #
@@ -82,24 +80,6 @@ var master_fire = func {
 	dc2 = getprop("/systems/electrical/bus/dc2");
 	dcbat = getprop("/systems/electrical/bus/dcbat");
 	pause = getprop("/sim/freeze/master");
-	
-	###################
-	# Detection Logic #
-	###################
-	
-	if (fwddet) {
-		setprop("/controls/fire/cargo/fwdsmokeLight", 1);
-		setprop("/controls/fire/cargo/warnfwd", 1);
-	} else {
-		setprop("/controls/fire/cargo/fwdsmokeLight", 0);
-	}
-	
-	if (aftdet) {
-		setprop("/controls/fire/cargo/aftsmokeLight", 1);
-		setprop("/controls/fire/cargo/warnaft", 1);
-	} else {
-		setprop("/controls/fire/cargo/aftsmokeLight", 0);
-	}
 	
 	###############
 	# Discharging #
@@ -195,6 +175,28 @@ var master_fire = func {
 }
 
 ###################
+# Detection Logic #
+###################
+
+setlistener("/systems/failures/cargo-fwd-fire", func() {
+	if (getprop("/systems/failures/cargo-fwd-fire")) {
+		setprop("/controls/fire/cargo/fwdsmokeLight", 1);
+		setprop("/controls/fire/cargo/warnfwd", 1);
+	} else {
+		setprop("/controls/fire/cargo/fwdsmokeLight", 0);
+	}
+}, 0, );
+
+setlistener("/systems/failures/cargo-aft-fire", func() {
+	if (getprop("/systems/failures/cargo-aft-fire")) {
+		setprop("/controls/fire/cargo/aftsmokeLight", 1);
+		setprop("/controls/fire/cargo/warnaft", 1);
+	} else {
+		setprop("/controls/fire/cargo/aftsmokeLight", 0);
+	}
+}, 0, );
+
+###################
 # Update Function #
 ###################
 
@@ -203,4 +205,3 @@ var update_fire = func {
 }
 
 var fire_timer = maketimer(0.2, update_fire);
-

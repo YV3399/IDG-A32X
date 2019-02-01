@@ -1,16 +1,11 @@
 # A3XX MCDU
-# Joshua Davidson (it0uchpods)
 
-##############################################
-# Copyright (c) Joshua Davidson (it0uchpods) #
-##############################################
+# Copyright (c) 2019 Joshua Davidson (it0uchpods)
 
 var MCDU_1 = nil;
 var MCDU_2 = nil;
 var MCDU1_display = nil;
 var MCDU2_display = nil;
-var updateL = 0;
-var updateR = 0;
 var default = "BoeingCDU-Large.ttf";
 var symbol = "helvetica_medium.txf";
 var normal = 70;
@@ -96,29 +91,15 @@ var canvas_MCDU_base = {
 	update: func() {
 		if (getprop("/systems/electrical/bus/ac1") >= 110 and getprop("/controls/lighting/DU/mcdu1") > 0.01) {
 			MCDU_1.update();
-			MCDU_1.updateFast();
-			updateL = 1;
 			MCDU_1.page.show();
 		} else {
-			updateL = 0;
 			MCDU_1.page.hide();
 		}
 		if (getprop("/systems/electrical/bus/ac2") >= 110 and getprop("/controls/lighting/DU/mcdu2") > 0.01) {
 			MCDU_2.update();
-			MCDU_2.updateFast();
-			updateR = 1;
 			MCDU_2.page.show();
 		} else {
-			updateR = 0;
 			MCDU_2.page.hide();
-		}
-	},
-	updateFast: func() {
-		if (updateL) {
-			MCDU_1.updateFast();
-		}
-		if (updateR) {
-			MCDU_2.updateFast();
 		}
 	},
 	updateCommon: func(i) {
@@ -1369,8 +1350,7 @@ var canvas_MCDU_base = {
 				setprop("/MCDU[" ~ i ~ "]/internal/switch", 1);
 			}
 		}
-	},
-	updateCommonFast: func(i) {
+		
 		me["Scratchpad"].setText(sprintf("%s", getprop("/MCDU[" ~ i ~ "]/scratchpad")));
 	},
 	# ack = ignore, wht = white, grn = green, blu = blue, amb = amber, yel = yellow
@@ -1687,9 +1667,6 @@ var canvas_MCDU_1 = {
 	update: func() {
 		me.updateCommon(0);
 	},
-	updateFast: func() {
-		me.updateCommonFast(0);
-	},
 };
 
 var canvas_MCDU_2 = {
@@ -1701,9 +1678,6 @@ var canvas_MCDU_2 = {
 	},
 	update: func() {
 		me.updateCommon(1);
-	},
-	updateFast: func() {
-		me.updateCommonFast(1);
 	},
 };
 
@@ -1729,15 +1703,10 @@ setlistener("sim/signals/fdm-initialized", func {
 	MCDU_2 = canvas_MCDU_2.new(group_MCDU2, "Aircraft/IDG-A32X/Models/Instruments/MCDU/res/mcdu.svg");
 	
 	MCDU_update.start();
-	MCDU_update_fast.start();
 });
 
-var MCDU_update = maketimer(0.2, func {
+var MCDU_update = maketimer(0.125, func {
 	canvas_MCDU_base.update();
-});
-
-var MCDU_update_fast = maketimer(0.125, func {
-	canvas_MCDU_base.updateFast();
 });
 
 var showMCDU1 = func {
@@ -1750,8 +1719,8 @@ var showMCDU2 = func {
 
 setlistener("/MCDU[0]/page", func {
 	setprop("/MCDU[0]/internal/switch", 0);
-});
+}, 0, 0);
 
 setlistener("/MCDU[1]/page", func {
 	setprop("/MCDU[1]/internal/switch", 0);
-});
+}, 0, 0);
