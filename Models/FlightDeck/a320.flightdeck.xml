@@ -630,7 +630,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>ParkBrk</object-name>
-		<property>controls/gear/brake-parking</property>
+		<property>fdm/jsbsim/fcs/brake-lever</property>
 		<factor>90</factor>
 		<axis>
 			<object-name>ParkBrk.axis</object-name>
@@ -1640,7 +1640,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Lcutoff</object-name>
-		<property>controls/engines/engine[0]/cutoff-switch</property>
+		<property>fdm/jsbsim/fcs/engine-cutoff[0]</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>  0</dep></entry>
 			<entry><ind>1</ind><dep>-70</dep></entry>
@@ -1666,7 +1666,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Rcutoff</object-name>
-		<property>controls/engines/engine[1]/cutoff-switch</property>
+		<property>fdm/jsbsim/fcs/engine-cutoff[1]</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>  0</dep></entry>
 			<entry><ind>1</ind><dep>-70</dep></entry>
@@ -4520,7 +4520,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>FlapsLever</object-name>
-		<property>controls/flight/flap-lever</property>
+		<property>fdm/jsbsim/fcs/flap-lever</property>
 		<interpolation>
 			<entry><ind>0</ind><dep> 0</dep></entry>
 			<entry><ind>1</ind><dep>14</dep></entry>
@@ -5567,7 +5567,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>SpdBrk</object-name>
-		<property>fdm/jsbsim/spoilers/speedbrake-nul</property>
+		<property>fdm/jsbsim/spoilers/main-lever</property>
 		<factor>45</factor>
 		<axis>
 			<object-name>SpdBrk.axis</object-name>
@@ -5577,7 +5577,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>SpdBrk</object-name>
-		<property>controls/flight/speedbrake-arm</property>
+		<property>fdm/jsbsim/spoilers/lever-arm</property>
 		<factor>-0.006</factor>
 		<axis>
 			<x>1</x>
@@ -5589,7 +5589,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>SpdBrk</object-name>
-		<property>controls/flight/speedbrake-arm</property>
+		<property>fdm/jsbsim/spoilers/lever-arm</property>
 		<factor>0.006</factor>
 		<axis>
 			<x>0</x>
@@ -5878,7 +5878,7 @@
 		<name>Engine 1 throttle lever</name>
 		<type>rotate</type>
 		<object-name>thr_l</object-name>
-		<property>controls/engines/engine[0]/throttle-lever</property>
+		<property>fdm/jsbsim/fcs/throttle-lever[0]</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
@@ -5903,7 +5903,7 @@
 		<name>Engine 1 throttle lever rev</name>
 		<type>rotate</type>
 		<object-name>thr_l</object-name>
-		<property>controls/engines/engine[0]/reverser</property>
+		<property>fdm/jsbsim/fcs/reverse-lever[0]</property>
 		<factor>-3.5</factor> 
 		<axis>
 			<object-name>trim.axis</object-name>
@@ -5913,7 +5913,7 @@
 		<name>Engine 1 throttle lever rev 2</name>
 		<type>rotate</type>
 		<object-name>thr_l</object-name>
-		<property>controls/engines/engine[0]/throttle-rev</property>
+		<property>fdm/jsbsim/fcs/reverse-thr-lever[0]</property>
 		<interpolation>
 			<entry><ind>0.00</ind><dep>  0</dep></entry>
 			<entry><ind>0.50</ind><dep>-20</dep></entry>
@@ -5953,7 +5953,7 @@
 		<name>Engine 2 throttle lever</name>
 		<type>rotate</type>
 		<object-name>thr_r</object-name>
-		<property>controls/engines/engine[1]/throttle-lever</property>
+		<property>fdm/jsbsim/fcs/throttle-lever[1]</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
@@ -5978,7 +5978,7 @@
 		<name>Engine 2 throttle lever rev</name>
 		<type>rotate</type>
 		<object-name>thr_r</object-name>
-		<property>controls/engines/engine[1]/reverser</property>
+		<property>fdm/jsbsim/fcs/reverse-lever[1]</property>
 		<factor>-3.5</factor> 
 		<axis>
 			<object-name>trim.axis</object-name>
@@ -5988,7 +5988,7 @@
 		<name>Engine 2 throttle lever rev 2</name>
 		<type>rotate</type>
 		<object-name>thr_r</object-name>
-		<property>controls/engines/engine[1]/throttle-rev</property>
+		<property>fdm/jsbsim/fcs/reverse-thr-lever[1]</property>
 		<interpolation>
 			<entry><ind>0.00</ind><dep> 0</dep></entry>
 			<entry><ind>0.50</ind><dep>-20</dep></entry>
