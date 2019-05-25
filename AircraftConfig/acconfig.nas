@@ -1,7 +1,7 @@
 # Aircraft Config Center
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (Octal450)
 
 var spinning = maketimer(0.05, func {
 	var spinning = getprop("/systems/acconfig/spinning");
@@ -94,6 +94,8 @@ setprop("/systems/acconfig/options/nd-rate", 1);
 setprop("/systems/acconfig/options/uecam-rate", 1);
 setprop("/systems/acconfig/options/lecam-rate", 1);
 setprop("/systems/acconfig/options/iesi-rate", 1);
+setprop("/systems/acconfig/options/autopush/show-route", 1);
+setprop("/systems/acconfig/options/autopush/show-wingtip", 1);
 var main_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/main/dialog", "Aircraft/IDG-A32X/AircraftConfig/main.xml");
 var welcome_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/welcome/dialog", "Aircraft/IDG-A32X/AircraftConfig/welcome.xml");
 var ps_load_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/psload/dialog", "Aircraft/IDG-A32X/AircraftConfig/psload.xml");
@@ -112,7 +114,7 @@ var rendering_dlg = gui.Dialog.new("sim/gui/dialogs/rendering/dialog", "Aircraft
 spinning.start();
 init_dlg.open();
 
-http.load("https://raw.githubusercontent.com/it0uchpods/IDG-A32X/master/revision.txt").done(func(r) setprop("/systems/acconfig/new-revision", r.response));
+http.load("https://raw.githubusercontent.com/Octal450/IDG-A32X/master/revision.txt").done(func(r) setprop("/systems/acconfig/new-revision", r.response));
 var revisionFile = (getprop("/sim/aircraft-dir") ~ "/revision.txt");
 var current_revision = io.readfile(revisionFile);
 print("IDG A32X Revision: " ~ current_revision);
@@ -127,9 +129,9 @@ setlistener("/systems/acconfig/new-revision", func {
 });
 
 var mismatch_chk = func {
-	if (num(string.replace(getprop("/sim/version/flightgear"),".","")) < 201810) {
+	if (num(string.replace(getprop("/sim/version/flightgear"),".","")) < 201830) {
 		setprop("/systems/acconfig/mismatch-code", "0x121");
-		setprop("/systems/acconfig/mismatch-reason", "FGFS version is too old! Please update FlightGear to at least 2018.1.0.");
+		setprop("/systems/acconfig/mismatch-reason", "FGFS version is too old! Please update FlightGear to at least 2018.3.0.");
 		if (getprop("/systems/acconfig/out-of-date") != 1) {
 			error_mismatch.open();
 		}
@@ -215,12 +217,17 @@ var readSettings = func {
 	setprop("/options/system/keyboard-mode", getprop("/systems/acconfig/options/keyboard-mode"));
 	setprop("/options/system/laptop-mode", getprop("/systems/acconfig/options/laptop-mode"));
 	setprop("/controls/adirs/skip", getprop("/systems/acconfig/options/adirs-skip"));
+	setprop("/sim/model/autopush/route/show", getprop("/systems/acconfig/options/autopush/show-route"));
+	setprop("/sim/model/autopush/route/show-wingtip", getprop("/systems/acconfig/options/autopush/show-wingtip"));
+	
 }
 
 var writeSettings = func {
 	setprop("/systems/acconfig/options/keyboard-mode", getprop("/options/system/keyboard-mode"));
 	setprop("/systems/acconfig/options/laptop-mode", getprop("/options/system/laptop-mode"));
 	setprop("/systems/acconfig/options/adirs-skip", getprop("/controls/adirs/skip"));
+	setprop("/systems/acconfig/options/autopush/show-route", getprop("/sim/model/autopush/route/show"));
+	setprop("/systems/acconfig/options/autopush/show-wingtip", getprop("/sim/model/autopush/route/show-wingtip"));
 	io.write_properties(getprop("/sim/fg-home") ~ "/Export/IDG-A32X-config.xml", "/systems/acconfig/options");
 }
 
@@ -357,6 +364,8 @@ var beforestart_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/systems/fadec/power-avail", 1);
+	setprop("/systems/fadec/powered-time", -310);
 	settimer(func {
 		setprop("/controls/gear/brake-left", 0);
 		setprop("/controls/gear/brake-right", 0);
@@ -438,6 +447,8 @@ var taxi_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/systems/fadec/power-avail", 1);
+	setprop("/systems/fadec/powered-time", -310);
 	setprop("/controls/lighting/turnoff-light-switch", 1);
 	setprop("/controls/lighting/taxi-light-switch", 0.5);
 	setprop("/controls/switches/landing-lights-l", 0.5);

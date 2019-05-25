@@ -1,6 +1,6 @@
-# A3XX mCDU by Joshua Davidson (it0uchpods) and Jonathan Redpath
+# A3XX mCDU by Joshua Davidson (Octal450) and Jonathan Redpath
 
-# Copyright (c) 2019 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (Octal450)
 
 var MCDU_init = func(i) {
 	MCDU_reset(i); # Reset MCDU, clears data
@@ -275,7 +275,11 @@ var rskbutton = func(btn, i) {
 			perfCRZInput("R6",i);
 		} else if ((getprop("/MCDU[" ~ i ~ "]/page") == "DATA") or (getprop("/MCDU[" ~ i ~ "]/page") == "PRINTFUNC") or (getprop("/MCDU[" ~ i ~ "]/page") == "PRINTFUNC2")) {
 			if (getprop("/MCDU[" ~ i ~ "]/scratchpad") != "AOC DISABLED") {
-				setprop("/MCDU[" ~ i ~ "]/last-scratchpad", getprop("/MCDU[" ~ i ~ "]/scratchpad"));
+				if (getprop("/MCDU[" ~ i ~ "]/scratchpad-msg") == 1) {
+					setprop("/MCDU[" ~ i ~ "]/last-scratchpad", "");
+				} else {
+					setprop("/MCDU[" ~ i ~ "]/last-scratchpad", getprop("/MCDU[" ~ i ~ "]/scratchpad"));
+				}
 			}
 			setprop("/MCDU[" ~ i ~ "]/scratchpad-msg", 1);
 			setprop("/MCDU[" ~ i ~ "]/scratchpad", "AOC DISABLED");
@@ -463,7 +467,7 @@ var button = func(btn, i) {
 				setprop("/MCDU[" ~ i ~ "]/scratchpad-msg", 0);
 			} else if (size(scratchpad) > 0) {
 				setprop("/MCDU[" ~ i ~ "]/last-scratchpad", "");
-				setprop("/MCDU[" ~ i ~ "]/scratchpad", left(scratchpad, size(scratchpad)-1));
+				setprop("/MCDU[" ~ i ~ "]/scratchpad", left(scratchpad, size(scratchpad) - 1));
 				setprop("/MCDU[" ~ i ~ "]/scratchpad-msg", 0);
 			}
 		} else if (btn == "0") {
@@ -520,7 +524,7 @@ var button = func(btn, i) {
 
 var notAllowed = func(i) {
 	if (getprop("/MCDU[" ~ i ~ "]/scratchpad") != "NOT ALLOWED") {
-		if (getprop("/MCDU[" ~ i ~ "]/scratchpad-msg") == 1) { # Messages clear after NOT ALLOWED
+		if (getprop("/MCDU[" ~ i ~ "]/scratchpad-msg") == 1) {
 			setprop("/MCDU[" ~ i ~ "]/last-scratchpad", "");
 		} else {
 			setprop("/MCDU[" ~ i ~ "]/last-scratchpad", getprop("/MCDU[" ~ i ~ "]/scratchpad"));

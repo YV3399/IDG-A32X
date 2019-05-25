@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
 <!-- A3XX CFM56/CFM Leap/PW PurePower FADEC -->
 
@@ -382,10 +382,16 @@
 							<value>MAN</value>
 						</equals>
 					</or>
-					<equals>
-						<property>/it-autoflight/output/thr-mode</property>
-						<value>0</value>
-					</equals>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/thr-mode</property>
+							<value>0</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/mode/thr</property>
+							<value>RETARD</value>
+						</equals>
+					</or>
 				</and>
 			</condition>
 			<value>0.3</value>
@@ -594,10 +600,16 @@
 							<value>MAN</value>
 						</equals>
 					</or>
-					<equals>
-						<property>/it-autoflight/output/thr-mode</property>
-						<value>0</value>
-					</equals>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/thr-mode</property>
+							<value>0</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/mode/thr</property>
+							<value>RETARD</value>
+						</equals>
+					</or>
 				</and>
 			</condition>
 			<value>0.3</value>

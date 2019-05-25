@@ -1,7 +1,7 @@
 # A3XX ECAM
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (it0uchpods)
+# Copyright (c) 2019 Joshua Davidson (Octal450)
 
 var stateL = 0;
 var stateR = 0;
@@ -311,6 +311,10 @@ var LowerECAM = {
 			setprop("/ECAM/warnings/master-warning-light", 0);
 			LowerECAM.failCall("sts");
 			return;
+		}
+		
+		if (b == "clr" and getprop("/ECAM/Lower/man-select") == 0 and getprop("/ECAM/Lower/fault-select") == 0) {
+			ecam.ECAM_controller.clear();
 		}
 		
 		if (getprop("/ECAM/Lower/fault-select") == 0) {
