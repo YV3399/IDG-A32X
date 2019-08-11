@@ -161,7 +161,7 @@
                 <path>Aircraft/IDG-A32X/Systems/fadec-cfm.xml</path>
             </autopilot>
 			<autopilot n="10">
-				<path>Aircraft/IDG-A32X/Systems/cfm56-sound.xml</path>
+				<path>Aircraft/IDG-A32X/Systems/leapx-sound.xml</path>
 			</autopilot>
 		</systems>
 		

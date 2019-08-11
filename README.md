@@ -15,3 +15,6 @@ Present pack includes the following Airbus A320 Family variants:
 
 ## Frequently Asked Questions
 For answers on frequently asked questions, refer to our [FAQ page](https://github.com/Octal450/IDG-A32X/blob/master/FAQ.md).
+
+## Unapproved Distributors
+If you get this aircraft from **anywhere but** [Octal450's repo](https://github.com/Octal450/IDG-A32X.git) you are not getting the aircraft from IDG, but from a 3rd party distributor. **This is strongly discouraged and you will not receive any support from IDG!**

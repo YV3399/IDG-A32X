@@ -3,7 +3,6 @@
 <!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
 <PropertyList>
-
 	<sim>
 
 		<author>Immersive Design Group: Joshua Davidson (Octal450), Jonathan Redpath (legoboyvdlp), Thorsten Herrmann (TH-555)</author>
@@ -95,6 +94,17 @@
 					<output-property>/systems/pitot/icing</output-property>
 				</iceable>
 			</icing>
+			<flame>
+				<red-high type="double">1.0</red-high>
+				<red-low type="double">0.95</red-low>
+				<red-base type="double">1.0</red-base>
+				<green-high type="double">0.741</green-high>
+				<green-low type="double">0.32</green-low>
+				<green-base type="double">0.741</green-base>
+				<blue-high type="double">0.10</blue-high>
+				<blue-low type="double">0.02</blue-low>
+				<blue-base type="double">0.09</blue-base>
+			</flame>
 		</model>
 		
 		<startup>
@@ -158,7 +168,11 @@
 			</autopilot>
 			<!-- 10 is sound -->
 		</systems>
-
+		
+		<sound>
+			<suppress-warning type="bool">1</suppress-warning>
+		</sound>
+	
 		<sounde>
 			<seatbelt-sign type="bool">0</seatbelt-sign>
 			<no-smoking-sign type="bool">0</no-smoking-sign>
@@ -168,6 +182,7 @@
 			<knb1 type="bool">0</knb1>
 			<oh-btn type="bool">0</oh-btn>
 			<switch1 type="bool">0</switch1>
+			<flaps-click type="bool">0</flaps-click>
 		</sounde>
 
 		<instrumentation>
@@ -349,6 +364,15 @@
 							<command>nasal</command>
 							<script>
 							acconfig.fail_dlg.open();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Adjust Sound Volumes</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							acconfig.sound_config_dlg.open();
 							</script>
 						</binding>
 					</item>
@@ -568,6 +592,10 @@
 			<onbat type="bool">false</onbat>
 			<skip type="bool">0</skip>
 		</adirs>
+		<atc>
+			<system-knob type="int">0</system-knob>
+			<mode-knob type="int">0</mode-knob>
+		</atc>
 		<APU>
 			<fire-btn type="bool">0</fire-btn>
 			<fire-btn-cover type="bool">0</fire-btn-cover>
@@ -584,6 +612,12 @@
 		<electric>
 			<avionics-switch type="bool">true</avionics-switch>
 		</electric>
+		<electrical>
+			<idg>
+				<left-idg-disc type="bool">false</left-idg-disc>
+				<right-idg-disc type="bool">false</right-idg-disc>
+			</idg>
+		</electrical>
 		<engines>
 			<engine-start-switch type="int">1</engine-start-switch>
 			<engine n="0">
@@ -613,6 +647,11 @@
 				<throttle-fdm type="double">0</throttle-fdm>
 			</engine>
 		</engines>
+		<fire>
+			<apu-test-btn type="bool">0</apu-test-btn>
+			<test-btn-1 type="bool">0</test-btn-1>
+			<test-btn-2 type="bool">0</test-btn-2>
+		</fire>
 		<flight>
 			<aileron-drives-tiller type="bool">0</aileron-drives-tiller>
 			<aileron-input>0</aileron-input>
@@ -767,6 +806,13 @@
 		<acconfig n="0">
 			<autoconfig-running>0</autoconfig-running>
 		</acconfig>
+		<atc>
+			<transponder-code type="string">2000</transponder-code>
+			<failed type="bool">0</failed>
+		</atc>
+		<apu n="0">
+			<emer-shutdown type="bool">false</emer-shutdown>
+		</apu>
 		<electrical n="0">
 			<bus n="0">
 				<dc-ess>0</dc-ess>
@@ -790,11 +836,36 @@
 			<spoiler-r3 type="bool">0</spoiler-r3>
 			<spoiler-r4 type="bool">0</spoiler-r4>
 			<spoiler-r5 type="bool">0</spoiler-r5>
+			<engine-left-fire type="bool">0</engine-left-fire>
+			<engine-right-fire type="bool">0</engine-right-fire>
+			<apu-fire type="bool">0</apu-fire>
+			<cargo-fwd-fire type="bool">0</cargo-fwd-fire>
+			<cargo-aft-fire type="bool">0</cargo-aft-fire>
 		</failures>
 		<fctl n="0">
 			<fac1 type="bool">0</fac1>
 			<fac2 type="bool">0</fac2>
 		</fctl>
+		<fire n="0">
+			<apu>
+				<temperature type="double">0</temperature>
+			</apu>
+			<engine1>
+				<temperature type="double">0</temperature>
+			</engine1>
+			<engine2>
+				<temperature type="double">0</temperature>
+			</engine2>
+			<cargo>
+				<disch type="bool">0</disch>
+				<aft>
+					<temperature type="double">0</temperature>
+				</aft>
+				<fwd>
+					<temperature type="double">0</temperature>
+				</fwd>
+			</cargo>
+		</fire>
 		<fuel n="0">
 			<only-use-ctr-tank type="bool">0</only-use-ctr-tank>
 			<tank n="0">
@@ -972,7 +1043,7 @@
 		<tcas><!-- http://wiki.flightgear.org/index.php/TCAS -->
 			<serviceable type="bool">true</serviceable><!-- TCAS ENABLE -->
 			<inputs>
-				<mode type="int">3</mode><!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+				<mode type="int">1</mode><!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
 			</inputs>
 			<voice>
 				<file-prefix type="string">Sounds/tcas/female/</file-prefix>
@@ -1563,6 +1634,9 @@
 		<acp>
 			<file>Aircraft/IDG-A32X/Nasal/acp.nas</file>
 		</acp>
+		<atc>
+			<file>Aircraft/IDG-A32X/Nasal/atc.nas</file>
+		</atc>
 	</nasal>
 
 </PropertyList>

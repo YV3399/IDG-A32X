@@ -5,6 +5,8 @@
 <aerodynamics>
 	
 	<property value="0.0">ice/wing</property>
+	<property value="0">rubbish/landL</property>
+	<property value="0">rubbish/landR</property>
 	
 	<axis name="LIFT">
 		
@@ -349,6 +351,26 @@
 						2.0  0.100
 					</tableData>
 				</table>
+			</product>
+		</function>
+		
+		<function name="aero/force/Drag_landing_light_left">
+			<description>Drag due to left landing light</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>rubbish/landL</property>
+				<value>0.0016</value>
+			</product>
+		</function>
+		
+		<function name="aero/force/Drag_landing_light_right">
+			<description>Drag due to right landing light</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>rubbish/landR</property>
+				<value>0.0016</value>
 			</product>
 		</function>
 	

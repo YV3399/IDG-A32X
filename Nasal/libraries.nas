@@ -136,6 +136,18 @@ setlistener("/controls/lighting/no-smoking-sign", func {
 	}, 1);
 }, 0, 0);
 
+setlistener("/controls/flight/flap-lever", func {
+	props.globals.getNode("/sim/sounde/flaps-click").setBoolValue(1);
+}, 0, 0);
+
+setlistener("/sim/sounde/flaps-click", func {
+	if (!getprop("/sim/sounde/flaps-click")) {
+		return;
+	}
+	settimer(func {
+		props.globals.getNode("/sim/sounde/flaps-click").setBoolValue(0);
+	}, 0.4);
+});
 #########
 # Doors #
 #########
@@ -205,6 +217,7 @@ var systemsInit = func {
 	rmp.init();
 	acp.init();
 	ecam.ECAM_controller.init();
+	atc.init();
 }
 
 setlistener("/sim/signals/fdm-initialized", func {
@@ -605,6 +618,18 @@ var lightsLoop = maketimer(0.2, func {
 		} else {
 			setprop("/controls/lighting/no-smoking-sign", 0); # sign stays on in cabin but sound still occurs
 		}
+	}
+	
+	if (getprop("controls/lighting/landing-lights[1]") >= 0.5) {
+		setprop("/fdm/jsbsim/rubbish/landL", 1);
+	} else {
+		setprop("/fdm/jsbsim/rubbish/landL", 0);
+	}
+	
+	if (getprop("controls/lighting/landing-lights[2]") >= 0.5) {
+		setprop("/fdm/jsbsim/rubbish/landR", 1);
+	} else {
+		setprop("/fdm/jsbsim/rubbish/landR", 0);
 	}
 });
 

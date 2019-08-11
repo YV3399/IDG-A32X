@@ -106,6 +106,25 @@ var canvas_upperECAM_base = {
 		foreach(var key; svg_keys) {
 			me[key] = canvas_group.getElementById(key);
 		}
+		
+		# set font
+		me["ECAML1"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML2"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML3"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML4"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML5"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML6"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML7"].setFont("LiberationMonoCustom.ttf");
+		me["ECAML8"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR1"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR2"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR3"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR4"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR5"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR6"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR7"].setFont("LiberationMonoCustom.ttf");
+		me["ECAMR8"].setFont("LiberationMonoCustom.ttf");
+	
 
 		me.page = canvas_group;
 

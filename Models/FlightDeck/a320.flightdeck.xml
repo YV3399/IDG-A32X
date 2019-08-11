@@ -350,6 +350,8 @@
 		<object-name>arpt_led</object-name>
 		<object-name>arpt_led.001</object-name>
 		<object-name>a-thr_led</object-name>
+		<object-name>atc-code</object-name>
+		<object-name>atc-test</object-name>
 		<object-name>audio_att_led</object-name>
 		<object-name>audio_att_sgn</object-name>
 		<object-name>audio_call_hf2_led</object-name>
@@ -443,11 +445,25 @@
 		</condition>
 	</animation>
 	
+	<animation>
+		<type>select</type>
+		<object-name>atc-code</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+	
 	<!-- Not Yet Implemented Lights -->
 	<!-- Remove from this animation once you simulate -->
 	<animation>
 		<type>select</type>
 		<object-name>alt-text-test</object-name>
+		<object-name>atc-test</object-name>
 		<object-name>audio_att_sgn</object-name>
 		<object-name>audio_call_hf2_led</object-name>
 		<object-name>audio_call_hf1_led</object-name>
@@ -487,7 +503,7 @@
 		<action>
 			<button>3</button>
 			<button>0</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -513,7 +529,7 @@
 		<action>
 			<button>4</button>
 			<button>1</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -553,7 +569,7 @@
 		<object-name>RudderTrimReset</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -583,11 +599,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.1f</format>
 		<property>fdm/jsbsim/hydraulics/rudder/trim-cmd-deg</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -609,11 +625,11 @@
 		<type type="string">text-value</type>
 		<format type="string">-88.8</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -647,7 +663,7 @@
 		<object-name>ParkBrk</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
 				<property>controls/gear/brake-parking</property>
@@ -1186,7 +1202,7 @@
 		<object-name>ecam_sts</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1205,7 +1221,7 @@
 		<object-name>ecam_apu</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1224,7 +1240,7 @@
 		<object-name>ecam_bleed</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1243,7 +1259,7 @@
 		<object-name>ecam_press</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1262,7 +1278,7 @@
 		<object-name>ecam_elec</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1281,7 +1297,7 @@
 		<object-name>ecam_hyd</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1300,7 +1316,7 @@
 		<object-name>ecam_fuel</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1319,7 +1335,7 @@
 		<object-name>ecam_eng</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1338,7 +1354,7 @@
 		<object-name>ecam_cond</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1357,7 +1373,7 @@
 		<object-name>ecam_door</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1376,7 +1392,7 @@
 		<object-name>ecam_wheel</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1395,7 +1411,7 @@
 		<object-name>ecam_fctl</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1414,7 +1430,7 @@
 		<object-name>ecam_to_config</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1639,7 +1655,7 @@
 		<object-name>ecam_rcl</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1659,7 +1675,7 @@
 		<object-name>ecam_clr_r</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1733,7 +1749,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/engines/engine-start-switch</property>
@@ -1745,7 +1761,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/engines/engine-start-switch</property>
@@ -1779,7 +1795,7 @@
 		<action>
 			<button>0</button>
 			<button>1</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -1795,7 +1811,7 @@
 		</action>
 		<action>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -1851,7 +1867,7 @@
 		</action>
 		<action>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -1916,7 +1932,7 @@
 			<button>1</button>
 			<button>3</button>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>modes/altimeter/inhg</property>
@@ -1986,11 +2002,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.2f</format>
 		<property>/instrumentation/altimeter/setting-inhg</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2012,11 +2028,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.2f</format>
 		<property>/instrumentation/altimeter/setting-inhg</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2038,11 +2054,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.0f</format>
 		<property>/instrumentation/altimeter/setting-hpa</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2064,11 +2080,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.0f</format>
 		<property>/instrumentation/altimeter/setting-hpa</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2090,11 +2106,11 @@
 		<type type="string">text-value</type>
 		<format type="string">STD</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2116,11 +2132,11 @@
 		<type type="string">text-value</type>
 		<format type="string">STD</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2142,11 +2158,11 @@
 		<type type="string">text-value</type>
 		<format type="string">88.88</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2168,11 +2184,11 @@
 		<type type="string">text-value</type>
 		<format type="string">88.88</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.009</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -2244,7 +2260,7 @@
 		<object-name>fd1</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -2276,7 +2292,7 @@
 		<object-name>ils</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2311,7 +2327,7 @@
 		<object-name>ils2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2346,7 +2362,7 @@
 		<object-name>fd2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -2379,7 +2395,7 @@
 		<object-name>cstr</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2421,7 +2437,7 @@
 		<object-name>cstr.001</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2463,7 +2479,7 @@
 		<object-name>wpt</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2505,7 +2521,7 @@
 		<object-name>wpt.001</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2547,7 +2563,7 @@
 		<object-name>vord</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2589,7 +2605,7 @@
 		<object-name>vord.001</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2631,7 +2647,7 @@
 		<object-name>ndb</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2673,7 +2689,7 @@
 		<object-name>ndb.001</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2715,7 +2731,7 @@
 		<object-name>arpt</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2757,7 +2773,7 @@
 		<object-name>arpt.001</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<condition>
 					<greater-than-equals>
@@ -2800,7 +2816,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setCptND(1);</script>
@@ -2809,7 +2825,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setCptND(-1);</script>
@@ -2838,7 +2854,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setFoND(1);</script>
@@ -2847,7 +2863,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setFoND(-1);</script>
@@ -2876,7 +2892,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setNDRange(0, 1);</script>
@@ -2885,7 +2901,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setNDRange(0, -1);</script>
@@ -2915,7 +2931,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setNDRange(1, 1);</script>
@@ -2924,7 +2940,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.setNDRange(1, -1);</script>
@@ -2953,7 +2969,7 @@
 		<object-name>vor-adf-1</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[0]/input/lh-vor-adf</property>
@@ -2964,7 +2980,7 @@
 		</action>
 		<action>
 			<button>1</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[0]/input/lh-vor-adf</property>
@@ -2993,7 +3009,7 @@
 		<object-name>vor-adf-1-right</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/lh-vor-adf</property>
@@ -3004,7 +3020,7 @@
 		</action>
 		<action>
 			<button>1</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/lh-vor-adf</property>
@@ -3033,7 +3049,7 @@
 		<object-name>vor-adf-2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[0]/input/rh-vor-adf</property>
@@ -3044,7 +3060,7 @@
 		</action>
 		<action>
 			<button>1</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[0]/input/rh-vor-adf</property>
@@ -3073,7 +3089,7 @@
 		<object-name>vor-adf-2-right</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/rh-vor-adf</property>
@@ -3084,7 +3100,7 @@
 		</action>
 		<action>
 			<button>1</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
 				<property>instrumentation/efis[1]/input/rh-vor-adf</property>
@@ -3454,11 +3470,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%3.0f</format>
 		<property>it-autoflight/input/spd-kts</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3480,11 +3496,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%0.3f</format>
 		<property>it-autoflight/input/spd-mach</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3506,11 +3522,11 @@
 		<type type="string">text-value</type>
 		<format type="string">.888</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3532,11 +3548,11 @@
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
 		<property>it-autoflight/input/hdg</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3558,11 +3574,11 @@
 		<type type="string">text-value</type>
 		<format type="string">888</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3584,11 +3600,11 @@
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
 		<property>it-autoflight/input/alt</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3610,11 +3626,11 @@
 		<type type="string">text-value</type>
 		<format type="string">88888</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3636,11 +3652,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
 		<property>it-autoflight/input/vs</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3662,11 +3678,11 @@
 		<type type="string">number-value</type>
 		<format type="string">%2.1f</format>
 		<property>it-autoflight/input/fpa</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3688,11 +3704,11 @@
 		<type type="string">text-value</type>
 		<format type="string">-8888</format>
 		<property>autopilot/servicable</property>
-		<truncate type="bool">false</truncate>
+		<truncate>false</truncate>
 		<font type="string">led.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<draw-text>true</draw-text>
+		<draw-alignment>false</draw-alignment>
+		<draw-boundingbox>false</draw-boundingbox>
 		<character-size>0.008</character-size>
 		<font-resolution>
 			<width type="int">32</width>
@@ -3777,8 +3793,18 @@
 			<button>0</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.SPDPush();</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.SPDPull();</script>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -3801,8 +3827,18 @@
 			<button>3</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.SPDAdjust(1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.SPDAdjust(10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -3817,8 +3853,18 @@
 			<button>4</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.SPDAdjust(-1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.SPDAdjust(-10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -3838,8 +3884,18 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.HDGPush();</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.HDGPull();</script>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -3862,8 +3918,18 @@
 			<button>3</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.HDGAdjust(1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.HDGAdjust(10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -3878,8 +3944,18 @@
 			<button>4</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.HDGAdjust(-1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.HDGAdjust(-10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -3999,7 +4075,7 @@
 		<object-name>ap2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -4065,6 +4141,16 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.ALTPush();</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.ALTPull();</script>
 			</binding>
@@ -4078,7 +4164,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>libraries.APPanel.ALTPush();</script>
+				<script>libraries.APPanel.ALTPull();</script>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -4089,8 +4175,18 @@
 			<button>3</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.ALTAdjust(1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.ALTAdjust(10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -4105,8 +4201,18 @@
 			<button>4</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.ALTAdjust(-1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.ALTAdjust(-10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -4124,7 +4230,7 @@
 		<object-name>alt-sel-mode</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
 				<property>it-autoflight/config/altitude-dial-mode</property>
@@ -4143,8 +4249,18 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.VSPush();</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.VSPull();</script>
 			</binding>
 			<binding>
 				<command>nasal</command>
@@ -4167,8 +4283,18 @@
 			<button>3</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.VSAdjust(1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.VSAdjust(10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -4183,8 +4309,18 @@
 			<button>4</button>
 			<repeatable>true</repeatable>
 			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
 				<command>nasal</command>
 				<script>libraries.APPanel.VSAdjust(-1);</script>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>nasal</command>
+				<script>libraries.APPanel.VSAdjust(-10);</script>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
@@ -4245,7 +4381,7 @@
 		<action>
 			<button>0</button>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>controls.flapsDown(1);</script>
@@ -4259,7 +4395,7 @@
 		<action>
 			<button>1</button>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>controls.flapsDown(-1);</script>
@@ -4295,7 +4431,7 @@
 		<object-name>footrest_cpt</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.l1Pedal();</script>
@@ -4323,7 +4459,7 @@
 		<object-name>footrest_cpt2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.l2Pedal();</script>
@@ -4351,7 +4487,7 @@
 		<object-name>footrest_fo</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.r1Pedal();</script>
@@ -4379,7 +4515,7 @@
 		<object-name>footrest_fo2</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.r2Pedal();</script>
@@ -5039,6 +5175,17 @@
 						<value>25</value>
 					</greater-than-equals>
 				</condition>
+				<command>property-assign</command>
+				<property>sim/sound/warnings/crc</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<condition>
+					<greater-than-equals>
+						<property>systems/electrical/bus/dc-ess</property>
+						<value>25</value>
+					</greater-than-equals>
+				</condition>
 				<command>nasal</command>
 				<script>
 					if (getprop("/it-autoflight/output/ap-warning") == 1) {
@@ -5081,10 +5228,6 @@
 				<script>
 					if (getprop("/it-autoflight/output/athr-warning") == 1) {
 						setprop("/it-autoflight/output/athr-warning", 0);
-					}
-					
-					if (getprop("/sim/sound/warnings/chime") == 1) {
-						setprop("/sim/sound/warnings/chime", 0);
 					}
 				</script>
 			</binding>
@@ -5153,7 +5296,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>/controls/flight/elevator-trim</property>
@@ -5163,7 +5306,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>/controls/flight/elevator-trim</property>
@@ -5262,7 +5405,7 @@
 		<object-name>SpdBrk</object-name>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>property-assign</command>
 				<property>controls/flight/speedbrake</property>
@@ -5277,7 +5420,7 @@
 		</action>
 		<action>
 			<button>4</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -5299,7 +5442,7 @@
 		</action>
 		<action>
 			<button>3</button>
-			<repeatable type="bool">false</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -5549,7 +5692,7 @@
 		<object-name>tillerFo</object-name>
 		<action>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -5562,7 +5705,7 @@
 		</action>
 		<action>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -5575,7 +5718,7 @@
 		</action>
 		<action>
 			<button>0</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>
@@ -5611,7 +5754,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>controls/engines/engine[0]/throttle</property>
@@ -5622,7 +5765,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>controls/engines/engine[0]/throttle</property>
@@ -5686,7 +5829,7 @@
 		<action>
 			<button>0</button>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>controls/engines/engine[1]/throttle</property>
@@ -5697,7 +5840,7 @@
 		<action>
 			<button>1</button>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>controls/engines/engine[1]/throttle</property>
@@ -5912,6 +6055,8 @@
 		<object-name>hdg-text-test</object-name>
 		<object-name>alt-text-test</object-name>
 		<object-name>vs-text-test</object-name>
+		<object-name>atc-code</object-name>
+		<object-name>atc-test</object-name>
 		<object-name>fpa-text</object-name>
 		<object-name>qnh-inhg</object-name>
 		<object-name>qnh-hpa</object-name>

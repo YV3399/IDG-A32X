@@ -5,45 +5,45 @@
 		<apu>
 			<name>apu_in</name>
 			<mode>looped</mode>
-			<path>apu/apu_inside.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 			</condition>
 			<volume>
-				<property>/systems/apu/rpm</property>
+				<property>sim/sound/other/apu</property>
 				<factor>0.005</factor>
-				<min>0</min>
+				<max>0.25</max>
 			</volume>
 			<pitch>
 				<property>/systems/apu/rpm</property>
-				<factor>0.01</factor>
-				<offset>0</offset>
+				<factor>0.05</factor>
+				<offset>-2</offset>
 			</pitch>
 		</apu>
 	
 		<apu>
 			<name>apu_out</name>
 			<mode>looped</mode>
-			<path>apu/turbine.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/x320_apu.wav</path>
 			<condition>
 				<not><property>sim/current-view/internal</property></not>
 			</condition>
 			<volume>
-				<property>/systems/apu/rpm</property>
+				<property>sim/sound/other/apu</property>
 				<factor>0.005</factor>
-				<min>0</min>
 			</volume>
 			<pitch>
 				<property>/systems/apu/rpm</property>
 				<factor>0.01</factor>
 				<offset>0</offset>
 			</pitch>
+			<reference-dist>60</reference-dist>
 		</apu>
 		
 		<hyd-yellow>
 			<name>yellowHydPump</name>
 			<mode>looped</mode>
-			<path>yellowHydPump.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/yellowHydPump.wav</path>
 			<condition>
 				<and>
 					<equals>
@@ -56,6 +56,9 @@
 					</equals>
 				</and>
 			</condition>
+			<volume>
+				<property>/systems/acconfig/options/sound/mechanical-volume</property>
+			</volume>
 		</hyd-yellow>
 		
 		<!-- Disabled until proper PTU system implemented, to not annoy people -->
@@ -67,6 +70,7 @@
 				<property>/systems/hydraulic/ptu-active</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/mechanical-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -76,7 +80,7 @@
 		<announcement>
 			<name>PurserSnacks</name>
 			<mode>once</mode>
-			<path>purserSnacks.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/purserSnacks.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/cabinCall</property>
@@ -93,7 +97,7 @@
 		<announcement>
 			<name>MechCall</name>
 			<mode>once</mode>
-			<path>mechCall.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/mechCall.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/mechCall</property>
@@ -110,7 +114,7 @@
 		<announcement>
 			<name>EmerCall</name>
 			<mode>once</mode>
-			<path>tripleBelt.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/tripleBelt.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/emerCall</property>
@@ -127,7 +131,7 @@
 		<callout>
 			<name>V1</name>
 			<mode>once</mode>
-			<path>V1.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/V1.wav</path>
 			<condition>
 				<and>
 					<equals>
@@ -153,6 +157,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -189,6 +194,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -223,6 +229,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -257,6 +264,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -291,6 +299,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -325,6 +334,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -359,6 +369,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -393,6 +404,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -427,6 +439,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -461,6 +474,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -495,6 +509,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -529,6 +544,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -563,6 +579,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -611,6 +628,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -657,6 +675,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -692,6 +711,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -726,6 +746,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -806,6 +827,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>8</factor>
 			</volume>
 			<reference-dist>20.0</reference-dist>
@@ -815,7 +837,7 @@
 		<apoff>
 			<name>apoff-looped</name>
 			<mode>looped</mode>
-			<path>Aircraft/IDG-A32X/Sounds/apoff.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Cockpit/calvary-charge-loop.wav</path>
 			<condition>
 				<and>
 					<equals>
@@ -837,6 +859,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>40.0</factor>
 			</volume>
 		</apoff>
@@ -844,7 +867,7 @@
 		<apoff>
 			<name>apoff-single</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/apoff.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Cockpit/calvary-charge-once.wav</path>
 			<condition>
 				<and>
 					<equals>
@@ -866,23 +889,7 @@
 				</and>
 			</condition>
 			<volume>
-				<factor>40.0</factor>
-			</volume>
-		</apoff>
-		
-		<apoff>
-			<name>athroff</name>
-			<path>Aircraft/IDG-A32X/Sounds/Cockpit/chime.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/athr</property>
-						<value>0</value>
-					</equals>
-					<property>/it-autoflight/sound/athrsound</property>
-				</and>
-			</condition>
-			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>40.0</factor>
 			</volume>
 		</apoff>
@@ -890,7 +897,7 @@
 		<gear>
 			<name>gear0</name>
 			<mode>in-transit</mode>
-			<path>FL2070/320gear.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_gear.wav</path>
 			<property>gear/gear[0]/position-norm</property>
 			<volume>
 				<property>sim/sounde/gear-vol</property>
@@ -900,7 +907,7 @@
 		<gear>
 			<name>gear1</name>
 			<mode>in-transit</mode>
-			<path>FL2070/320gear.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_gear.wav</path>
 			<property>gear/gear[1]/position-norm</property>
 			<volume>
 				<property>sim/sounde/gear-vol</property>
@@ -910,7 +917,7 @@
 		<gear>
 			<name>gear2</name>
 			<mode>in-transit</mode>
-			<path>FL2070/320gear.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_gear.wav</path>
 			<property>gear/gear[2]/position-norm</property>
 			<volume>
 				<property>sim/sounde/gear-vol</property>
@@ -918,7 +925,24 @@
 		</gear>
 		
 		<wind>
-			<path>FL2070/320wind.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/wind_cockpit.wav</path>
+			<mode>looped</mode>
+			<name>wind</name>
+			<condition>
+				<property>sim/current-view/internal</property>
+			</condition>
+			<volume>
+				<property>sim/sound/other/cockpit-wind</property>
+				<offset>0</offset>
+			</volume>
+			<pitch>
+				<property>sim/sound/other/windp</property>
+				<offset>0</offset>
+			</pitch>
+		</wind>
+		
+		<wind>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/wind_cabin.wav</path>
 			<mode>looped</mode>
 			<name>wind</name>
 			<condition>
@@ -934,32 +958,134 @@
 			</pitch>
 		</wind>
 		
+		<ac>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_aircond.wav</path>
+			<mode>looped</mode>
+			<name>air conditioning</name>
+			<condition>
+				<property>sim/current-view/internal</property>
+			</condition>
+			<volume>
+				<property>sim/sound/other/air-con</property>
+			</volume>
+		</ac>
+		
 		<wow>
 			<mode>once</mode>
 			<name>wow0</name>
-			<path>FL2070/320touch.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Touch-Nose.wav</path>
 			<condition>
 				<property>gear/gear[0]/wow</property>
 			</condition>
+			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
+			</volume>
 		</wow>
 		
 		<wow>
 			<mode>once</mode>
 			<name>wow1</name>
-			<path>FL2070/320touch.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Touch-Main.wav</path>
 			<condition>
 				<property>gear/gear[1]/wow</property>
 			</condition>
+			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
+			</volume>
 		</wow>
 		
 		<wow>
 			<mode>once</mode>
 			<name>wow2</name>
-			<path>FL2070/320touch.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Touch-Main.wav</path>
 			<condition>
 				<property>gear/gear[2]/wow</property>
 			</condition>
+			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
+			</volume>
 		</wow>
+		
+		<roll>
+			<name>roll1c</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Cockpit_Roll.wav</path>
+			<property>gear/gear[0]/wow</property>
+			<volume>
+				<property>sim/sound/other/cockpit-roll</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>sim/sound/other/rollp</property>
+			</pitch>
+		</roll>
+		
+		<roll>
+			<name>roll2c</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Cockpit_Roll.wav</path>
+			<property>gear/gear[1]/wow</property>
+			
+			<volume>
+				<property>sim/sound/other/cockpit-roll</property>
+				<factor>1</factor>
+			</volume>
+		</roll>
+		
+		<roll>
+			<name>roll3c</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Cockpit_Roll.wav</path>
+			<property>gear/gear[2]/wow</property>
+			<volume>
+				<property>sim/sound/other/cockpit-roll</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>sim/sound/other/rollp</property>
+			</pitch>
+		</roll>
+		
+		
+		<roll>
+			<name>roll1</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Roll.wav</path>
+			<property>gear/gear[0]/wow</property>
+			<volume>
+				<property>sim/sound/other/roll</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>sim/sound/other/rollp</property>
+			</pitch>
+		</roll>
+		
+		<roll>
+			<name>roll2</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Roll.wav</path>
+			<property>gear/gear[1]/wow</property>
+			
+			<volume>
+				<property>sim/sound/other/roll</property>
+				<factor>1</factor>
+			</volume>
+		</roll>
+		
+		<roll>
+			<name>roll3</name>
+			<mode>looped</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/Roll.wav</path>
+			<property>gear/gear[2]/wow</property>
+			<volume>
+				<property>sim/sound/other/roll</property>
+				<factor>1</factor>
+			</volume>
+			<pitch>
+				<property>sim/sound/other/rollp</property>
+			</pitch>
+		</roll>
 		
 		<detenta>
 			<mode>once</mode>
@@ -972,7 +1098,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -987,7 +1113,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1002,7 +1128,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1017,7 +1143,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1032,7 +1158,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1047,7 +1173,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1062,7 +1188,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1077,7 +1203,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1092,7 +1218,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1107,7 +1233,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1122,7 +1248,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1137,7 +1263,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1152,7 +1278,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1167,7 +1293,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1182,7 +1308,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detenta>
 		
@@ -1197,7 +1323,7 @@
 				</equals>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</detentb>
 		
@@ -1215,7 +1341,7 @@
 				</and>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</sb>
 		<ns>
@@ -1232,7 +1358,7 @@
 				</and>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 			</volume>
 		</ns>
 		
@@ -1244,6 +1370,7 @@
 				<property>/sim/sounde/btn1</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.75</factor>
 			</volume>
 		</switch>
@@ -1256,6 +1383,7 @@
 				<property>/sim/sounde/oh-btn</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.75</factor>
 			</volume>
 		</switch>
@@ -1268,6 +1396,7 @@
 				<property>/sim/sounde/btn3</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.75</factor>
 			</volume>
 		</switch>
@@ -1280,6 +1409,7 @@
 				<property>/sim/sounde/knb1</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.60</factor>
 			</volume>
 		</switch>
@@ -1292,7 +1422,35 @@
 				<property>/sim/sounde/switch1</property>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.75</factor>
+			</volume>
+		</switch>
+		
+		<switch>
+			<name>Flaps Lever</name>
+			<mode>once</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_flaplever.wav</path>
+			<condition>
+				<and>
+					<property>/sim/sounde/flaps-click</property>
+					<property>/sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
+				<factor>0.75</factor>
+			</volume>
+		</switch>
+		
+		<switch>
+			<name>Flaps Motor</name>
+			<mode>in-transit</mode>
+			<path>Aircraft/IDG-A32X/Sounds/SASA/A320_flapmotor.wav</path>
+			<property>/surface-positions/flap-pos-norm</property>
+			<volume>
+				<property>/sim/sound/other/flaps</property>
+				<factor>1.00</factor>
 			</volume>
 		</switch>
 		
@@ -1310,6 +1468,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.60</factor>
 			</volume>
 		</cvrtone>
@@ -1325,6 +1484,7 @@
 				</greater-than>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.80</factor>
 			</volume>
 		</relay>
@@ -1340,6 +1500,7 @@
 				</greater-than>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.80</factor>
 			</volume>
 		</relay>
@@ -1361,6 +1522,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.60</factor>
 			</volume>
 		</relay>
@@ -1376,6 +1538,7 @@
 				</equals>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<factor>0.60</factor>
 			</volume>
 		</relay>
@@ -1383,7 +1546,7 @@
 		<relay>
 			<name>Avionics</name>
 			<mode>looped</mode>
-			<path>Aircraft/IDG-A32X/Sounds/FL2070/320efis.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/320efis.wav</path>
 			<condition>
 				<and>
 					<property>sim/current-view/internal</property>
@@ -1400,6 +1563,7 @@
 				</and>
 			</condition>
 			<volume>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>0.60</factor>
 			</volume>
 		</relay>
@@ -1407,7 +1571,7 @@
 		<announcements>
 			<name>welcomeFA</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/welcome.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/welcome.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/welcomefa</property>
@@ -1422,7 +1586,7 @@
 		<announcements>
 			<name>welcomeCA</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/captwelcome.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/captwelcome.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/welcomecapt</property>
@@ -1437,7 +1601,7 @@
 		<announcements>
 			<name>doorsDep</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/doorsdepart.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/doorsdepart.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/doors</property>
@@ -1452,7 +1616,7 @@
 		<announcements>
 			<name>PrepTo</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/takeoff.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/takeoff.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/prepareto</property>
@@ -1467,7 +1631,7 @@
 		<announcements>
 			<name>seatbeltOff</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/belt10k.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/belt10k.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/seatbelt-10k</property>
@@ -1482,7 +1646,7 @@
 		<announcements>
 			<name>safety</name>
 			<mode>once</mode>
-			<path>Aircraft/IDG-A32X/Sounds/safety.wav</path>
+			<path>Aircraft/IDG-A32X/Sounds/Announce/safety.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/sounde/safety</property>
@@ -1503,7 +1667,7 @@
 				<property>/sim/sound/warnings/chime</property>
 			</condition>
 			<volume>
-				<property>sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 			</volume>
 			<reference-dist>10</reference-dist>
 			<max-dist>100</max-dist>
@@ -1515,11 +1679,16 @@
 			<mode>looped</mode>
 			<type>avionics</type>
 			<condition>
-				<property>/ECAM/warnings/master-warning-light</property>
-				<property>/sim/sound/warnings/crc</property>
+				<and>
+					<property>/ECAM/warnings/master-warning-light</property>
+					<property>/sim/sound/warnings/crc</property>
+				</and>
 			</condition>
 			<volume>
-				<property>sim/sound/effects/volume</property>
+				<product>
+					<property>/systems/acconfig/options/sound/avionics-volume</property>
+					<value>0.8</value>
+				</product>
 			</volume>
 			<reference-dist>10</reference-dist>
 			<max-dist>100</max-dist>
@@ -1534,7 +1703,7 @@
 				<property>warnings/stall/active</property>
 			</condition>
 			<volume>
-				<property>sim/sound/effects/volume</property>
+				<property>/systems/acconfig/options/sound/avionics-volume</property>
 				<factor>3</factor>
 				<!--offset>1</offset-->
 				<min>1</min>
@@ -1544,6 +1713,5 @@
 			<reference-dist>10</reference-dist>
 			<max-dist>100.0</max-dist>
 		</stall-voice>
-
 	  </fx>
 </PropertyList>

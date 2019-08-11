@@ -1165,5 +1165,4 @@
 		<output>/instrumentation/ddrmi/flag-2</output>
 		<filter-time>0.64</filter-time>
 	</filter>
-
 </PropertyList>

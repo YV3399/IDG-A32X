@@ -25,22 +25,31 @@ var lineIndex = 0;
 var rightLineIndex = 0;
 var statusIndex = 0;
 
+var flash = 0;
+var hasCleared = 0;
+var statusFlag = 0;
+
 var warning = {
-	new: func(msg,colour,aural,light) {
+	new: func(msg,colour = "g",aural = 9,light = 9,hasSubmsg = 0,lastSubmsg = 0, sdPage = "nil") {
 		var t = {parents:[warning]};
 		
 		t.msg = msg;
-		t.active = 0;
 		t.colour = colour;
 		t.aural = aural;
 		t.light = light;
+		t.hasSubmsg = hasSubmsg;
+		t.lastSubmsg = lastSubmsg;
+		t.active = 0;
 		t.noRepeat = 0;
+		t.noRepeat2 = 0;
 		t.clearFlag = 0;
+		t.sdPage = sdPage;
+		t.hasCalled = 0;
 		
 		return t
 	},
 	write: func() {
-		if (me.active == 0) {return;}
+		if (me.active == 0) { return; }
 		lineIndex = 0;
 		while (lineIndex < 7 and lines[lineIndex].getValue() != "") {
 			lineIndex = lineIndex + 1; # go to next line until empty line
@@ -58,29 +67,34 @@ var warning = {
 		}
 	},
 	warnlight: func() {
-		if (me.light >= 1) {return;}
-		if (me.active == 1 and me.noRepeat == 0) { # only toggle light once per message, allows canceling 
-			lights[me.light].setBoolValue(1);
-			me.noRepeat = 1;
-		}
+		if (me.light > 1 or me.noRepeat == 1 or me.active == 0) {return;}
+		lights[me.light].setBoolValue(1);
+		me.noRepeat = 1;
 	},
 	sound: func() {
-		if (me.aural > 1) {return;} 
-		if (me.active == 1) {
-			if (!aural[me.aural].getBoolValue()) {
-				aural[me.aural].setBoolValue(1);
-			}
+        if (me.aural > 1 or me.noRepeat2 == 1 or me.active == 0) {return;}
+		if (me.aural != 0) {
+			aural[me.aural].setBoolValue(0); 
 		}
-	},
+        me.noRepeat2 = 1;
+		settimer(func() {
+			aural[me.aural].setBoolValue(1);
+		}, 0.15);
+    },
+	callPage: func() {
+		if (me.sdPage == "nil" or me.hasCalled == 1) { return; }
+		#libraries.LowerECAM.failCall(me.sdPage);
+		me.hasCalled = 1;
+	}
 };
 
 var memo = {
-	new: func(msg,colour) {
+	new: func(msg,colour = "g") {
 		var t = {parents:[memo]};
 		
 		t.msg = msg;
-		t.active = 0;
 		t.colour = colour;
+		t.active = 0;
 		
 		return t
 	},
@@ -110,8 +124,8 @@ var status = {
 		var t = {parents:[status]};
 		
 		t.msg = msg;
-		t.active = 0;
 		t.colour = colour;
+		t.active = 0;
 		
 		return t
 	},
@@ -156,14 +170,19 @@ var ECAM_controller = {
 		}
 		
 		# write to ECAM
+		var counter = 0;
 		
 		foreach (var w; warnings.vector) {
-			w.write();
-			w.warnlight();
-			w.sound();
+			if (counter >= 9) { break; }
+			if (w.active == 1) {
+				w.write();
+				w.warnlight();
+				w.sound();
+				counter += 1;
+			}
 		}
 		
-		if (lines[0].getValue() == "") { # disable left memos if a warning exists. Warnings are processed first, so this stops leftmemos if line1 is not empty
+		if (lines[0].getValue() == "" and flash == 0) { # disable left memos if a warning exists. Warnings are processed first, so this stops leftmemos if line1 is not empty
 			foreach (var l; leftmemos.vector) {
 				l.write();
 			}
@@ -219,12 +238,20 @@ var ECAM_controller = {
 		}
 	},
 	clear: func() {
+		hasCleared = 0;
 		foreach (var w; warnings.vector) {
 			if (w.active == 1) {
-				# if (w.msg == "ENG DUAL FAILURE") { continue; }
+				if (w.hasSubmsg == 1) { continue; }
 				w.clearFlag = 1;
+				hasCleared = 1;
+				statusFlag = 1;
 				break;
 			}
+		}
+		
+		if (hasCleared == 0 and statusFlag == 1) {
+			libraries.LowerECAM.failCall("sts");
+			statusFlag = 0;
 		}
 	},
 	recall: func() {
@@ -236,6 +263,11 @@ var ECAM_controller = {
 			}
 		}
 	},
+	warningReset: func(warning) {
+		warning.active = 0;
+		warning.noRepeat = 0;
+		warning.noRepeat2 = 0;
+	},
 };
 
 setlistener("/systems/electrical/bus/dc-ess", func {
@@ -244,11 +276,15 @@ setlistener("/systems/electrical/bus/dc-ess", func {
 	}
 }, 0, 0);
 
-var ECAMloopTimer = maketimer(0.2, func {
+var ECAMloopTimer = maketimer(0.15, func {
 	ECAM_controller.loop();
 });
 
 # Flash Master Warning Light
+var shutUpYou = func() {
+	lights[0].setBoolValue(0);
+}
+
 var warnTimer = maketimer(0.25, func {
 	if (!lights[0].getBoolValue()) {
 		warnTimer.stop();

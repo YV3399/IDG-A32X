@@ -73,6 +73,8 @@ var failReset = func {
 	setprop("/systems/failures/fuelmode", 0);
 	setprop("/systems/failures/cargo-aft-fire", 0);
 	setprop("/systems/failures/cargo-fwd-fire", 0);
+	setprop("/systems/failures/engine-left-fire", 0);
+	setprop("/systems/failures/engine-right-fire", 0);
 }
 
 failReset();
@@ -85,7 +87,6 @@ setprop("/systems/acconfig/out-of-date", 0);
 setprop("/systems/acconfig/mismatch-code", "0x000");
 setprop("/systems/acconfig/mismatch-reason", "XX");
 setprop("/systems/acconfig/options/keyboard-mode", 0);
-setprop("/systems/acconfig/options/laptop-mode", 0);
 setprop("/systems/acconfig/options/adirs-skip", 0);
 setprop("/systems/acconfig/options/welcome-skip", 0);
 setprop("/systems/acconfig/options/no-rendering-warn", 0);
@@ -94,6 +95,12 @@ setprop("/systems/acconfig/options/nd-rate", 1);
 setprop("/systems/acconfig/options/uecam-rate", 1);
 setprop("/systems/acconfig/options/lecam-rate", 1);
 setprop("/systems/acconfig/options/iesi-rate", 1);
+setprop("/systems/acconfig/options/sound/interior-volume", 1);
+setprop("/systems/acconfig/options/sound/exterior-volume", 1);
+setprop("/systems/acconfig/options/sound/wing-volume", 1);
+setprop("/systems/acconfig/options/sound/avionics-volume", 1);
+setprop("/systems/acconfig/options/sound/effects-volume", 1);
+setprop("/systems/acconfig/options/sound/mechanical-volume", 1);
 setprop("/systems/acconfig/options/autopush/show-route", 1);
 setprop("/systems/acconfig/options/autopush/show-wingtip", 1);
 var main_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/main/dialog", "Aircraft/IDG-A32X/AircraftConfig/main.xml");
@@ -111,6 +118,8 @@ var error_mismatch = gui.Dialog.new("sim/gui/dialogs/acconfig/error/mismatch/dia
 var groundservices_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/groundsrvc/dialog", "Aircraft/IDG-A32X/AircraftConfig/groundservices.xml");
 var du_quality = gui.Dialog.new("sim/gui/dialogs/acconfig/du-quality/dialog", "Aircraft/IDG-A32X/AircraftConfig/du-quality.xml");
 var rendering_dlg = gui.Dialog.new("sim/gui/dialogs/rendering/dialog", "Aircraft/IDG-A32X/AircraftConfig/rendering.xml");
+var sound_config_dlg = gui.Dialog.new("sim/gui/dialogs/sound-config/dialog", "Aircraft/IDG-A32X/AircraftConfig/sound-config.xml");
+
 spinning.start();
 init_dlg.open();
 
@@ -215,7 +224,6 @@ var renderingSettings = {
 var readSettings = func {
 	io.read_properties(getprop("/sim/fg-home") ~ "/Export/IDG-A32X-config.xml", "/systems/acconfig/options");
 	setprop("/options/system/keyboard-mode", getprop("/systems/acconfig/options/keyboard-mode"));
-	setprop("/options/system/laptop-mode", getprop("/systems/acconfig/options/laptop-mode"));
 	setprop("/controls/adirs/skip", getprop("/systems/acconfig/options/adirs-skip"));
 	setprop("/sim/model/autopush/route/show", getprop("/systems/acconfig/options/autopush/show-route"));
 	setprop("/sim/model/autopush/route/show-wingtip", getprop("/systems/acconfig/options/autopush/show-wingtip"));
@@ -224,7 +232,6 @@ var readSettings = func {
 
 var writeSettings = func {
 	setprop("/systems/acconfig/options/keyboard-mode", getprop("/options/system/keyboard-mode"));
-	setprop("/systems/acconfig/options/laptop-mode", getprop("/options/system/laptop-mode"));
 	setprop("/systems/acconfig/options/adirs-skip", getprop("/controls/adirs/skip"));
 	setprop("/systems/acconfig/options/autopush/show-route", getprop("/sim/model/autopush/route/show"));
 	setprop("/systems/acconfig/options/autopush/show-wingtip", getprop("/sim/model/autopush/route/show-wingtip"));
@@ -266,6 +273,8 @@ var colddark = func {
 		setprop("/controls/lighting/taxi-light-switch", 0.0);
 		setprop("/controls/switches/landing-lights-l", 0.0);
 		setprop("/controls/switches/landing-lights-r", 0.0);
+		setprop("/controls/atc/mode-knob", 0);
+		atc.transponderPanel.modeSwitch(1);
 		libraries.systemsInit();
 		failReset();
 		if (getprop("/engines/engine[1]/n2-actual") < 2) {
@@ -447,6 +456,8 @@ var taxi_b = func {
 	setprop("/controls/radio/rmp[0]/on", 1);
 	setprop("/controls/radio/rmp[1]/on", 1);
 	setprop("/controls/radio/rmp[2]/on", 1);
+	setprop("/controls/atc/mode-knob", 2);
+	atc.transponderPanel.modeSwitch(3);
 	setprop("/systems/fadec/power-avail", 1);
 	setprop("/systems/fadec/powered-time", -310);
 	setprop("/controls/lighting/turnoff-light-switch", 1);
@@ -495,6 +506,8 @@ var takeoff = func {
 				setprop("/controls/flight/flap-lever", 1);
 				setprop("/controls/flight/flap-pos", 2);
 				setprop("/controls/flight/flap-txt", "1+F");
+				setprop("/controls/atc/mode-knob", 4);
+				atc.transponderPanel.modeSwitch(5);
 				libraries.flaptimer.start();
 				setprop("/controls/flight/elevator-trim", -0.07);
 				systems.arm_autobrake(3);

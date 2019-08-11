@@ -1,5 +1,15 @@
 # Frequently Asked Questions
 
+## Download
+
+### Q. The download will not extract or is corrupted. Why?
+
+Try to download the aircraft again. The download may have failed for some reason.
+
+### Q. I found other distributors offering downloads of the this IDG aircraft. Can I use them?
+
+**Using other distributors is strongly discouraged and you will not receive any support from IDG!** You should get the aircraft from [Octal450's repo](https://github.com/Octal450/IDG-A32X.git).
+
 ## Startup
 
 ### Q. Error Code: 0x121 appears. Why?

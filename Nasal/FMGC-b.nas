@@ -180,6 +180,7 @@ var Custom = {
 		athrOff: props.globals.initNode("/it-autoflight/sound/athrsound", 0, "BOOL"),
 		enableAthrOff: 0,
 	},
+	ThrLock: props.globals.getNode("/systems/thrust/thr-locked", 1)
 };
 
 var ITAF = {
@@ -492,6 +493,7 @@ var ITAF = {
 		if (s == 1) {
 			if (Misc.acEss.getValue() >= 110) {
 				Output.athr.setBoolValue(1);
+				Custom.ThrLock.setValue(0);
 				Custom.Sound.enableAthrOff = 1;
 				Custom.Sound.athrOff.setBoolValue(0);
 			}

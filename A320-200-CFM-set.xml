@@ -7,7 +7,7 @@
 	<sim>
 	
 		<sound>
-			<path>Aircraft/IDG-A32X/Sounds/cfm56-sound.xml</path>
+			<path>Aircraft/IDG-A32X/Sounds/cfm56b-sound.xml</path>
 		</sound>
 		<checklists include="A32X-Checklists.xml"/>
 		<description>Airbus A320-214 (CFM56-5B4)</description>
