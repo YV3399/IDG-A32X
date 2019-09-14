@@ -1,401 +1,401 @@
-<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+<!-- Copy2 (c) 2019 Joshua Davidson (Octal450) -->
 
 <PropertyList include="A320-common-sound.xml">
   <fx>
 	<!-- cockpit -->
 	<engine>
-		<name>a320_cockpit_idle_left</name>
+		<name>a320_cockpit_idle_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle-left-v</property>
+			<property>/sim/sound/cockpit/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle-left-p</property>
+			<property>/sim/sound/cockpit/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_idle_right</name>
+		<name>a320_cockpit_idle_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle-right-v</property>
+			<property>/sim/sound/cockpit/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle-right-p</property>
+			<property>/sim/sound/cockpit/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_idle2_left</name>
+		<name>a320_cockpit_idle2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle2-left-v</property>
+			<property>/sim/sound/cockpit/idle2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle2-left-p</property>
+			<property>/sim/sound/cockpit/idle2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_idle2_right</name>
+		<name>a320_cockpit_idle2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle2-right-v</property>
+			<property>/sim/sound/cockpit/idle2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle2-right-p</property>
+			<property>/sim/sound/cockpit/idle2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_lowspool_left</name>
+		<name>a320_cockpit_lowspool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/lowspool-left-v</property>
+			<property>/sim/sound/cockpit/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/lowspool-left-p</property>
+			<property>/sim/sound/cockpit/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_lowspool_right</name>
+		<name>a320_cockpit_lowspool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/lowspool-right-v</property>
+			<property>/sim/sound/cockpit/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/lowspool-right-p</property>
+			<property>/sim/sound/cockpit/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_spool_left</name>
+		<name>a320_cockpit_spool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/spool-left-v</property>
+			<property>/sim/sound/cockpit/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/spool-left-p</property>
+			<property>/sim/sound/cockpit/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_spool_right</name>
+		<name>a320_cockpit_spool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/spool-right-v</property>
+			<property>/sim/sound/cockpit/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/spool-right-p</property>
+			<property>/sim/sound/cockpit/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_hum_left</name>
+		<name>a320_cockpit_hum_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/hum-left-v</property>
+			<property>/sim/sound/cockpit/hum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/hum-left-p</property>
+			<property>/sim/sound/cockpit/hum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_hum_right</name>
+		<name>a320_cockpit_hum_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/hum-right-v</property>
+			<property>/sim/sound/cockpit/hum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/hum-right-p</property>
+			<property>/sim/sound/cockpit/hum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_comb_left</name>
+		<name>a320_cockpit_comb_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb-left-v</property>
+			<property>/sim/sound/cockpit/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb-left-p</property>
+			<property>/sim/sound/cockpit/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_comb_right</name>
+		<name>a320_cockpit_comb_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb-right-v</property>
+			<property>/sim/sound/cockpit/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb-right-p</property>
+			<property>/sim/sound/cockpit/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_comb2_left</name>
+		<name>a320_cockpit_comb2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb2-left-v</property>
+			<property>/sim/sound/cockpit/comb2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb2-left-p</property>
+			<property>/sim/sound/cockpit/comb2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_comb2_right</name>
+		<name>a320_cockpit_comb2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb2-right-v</property>
+			<property>/sim/sound/cockpit/comb2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb2-right-p</property>
+			<property>/sim/sound/cockpit/comb2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_buzz_left</name>
+		<name>a320_cockpit_buzz_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/buzz-left-v</property>
+			<property>/sim/sound/cockpit/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/buzz-left-p</property>
+			<property>/sim/sound/cockpit/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_buzz_right</name>
+		<name>a320_cockpit_buzz_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/buzz-right-v</property>
+			<property>/sim/sound/cockpit/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/buzz-right-p</property>
+			<property>/sim/sound/cockpit/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_reverse_left</name>
+		<name>a320_cockpit_reverse_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/reverse-left-v</property>
+			<property>/sim/sound/cockpit/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/reverse-left-p</property>
+			<property>/sim/sound/cockpit/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_cockpit_reverse_right</name>
+		<name>a320_cockpit_reverse_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/cockpit/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/reverse-right-v</property>
+			<property>/sim/sound/cockpit/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/reverse-right-p</property>
+			<property>/sim/sound/cockpit/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -408,18 +408,18 @@
 	
 	<!-- outside -->
 	<engine>
-		<name>a320_external_idle_left</name>
+		<name>a320_external_idle_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-left-v</property>
+			<property>/sim/sound/external/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -432,25 +432,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_right</name>
+		<name>a320_external_idle_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-right-v</property>
+			<property>/sim/sound/external/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -463,25 +463,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_rear_left</name>
+		<name>a320_external_idle_rear_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleRear.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleR-left-v</property>
+			<property>/sim/sound/external/idleR-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleR-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -494,25 +494,25 @@
 		</orientation>
 		<reference-dist>60</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_rear_right</name>
+		<name>a320_external_idle_rear_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleRear.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleR-right-v</property>
+			<property>/sim/sound/external/idleR-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleR-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -525,25 +525,25 @@
 		</orientation>
 		<reference-dist>60</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_distant_left</name>
+		<name>a320_external_idle_distant_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-left-v</property>
+			<property>/sim/sound/external/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -556,25 +556,25 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_distant_right</name>
+		<name>a320_external_idle_distant_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-right-v</property>
+			<property>/sim/sound/external/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -587,25 +587,25 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_distant_side_left</name>
+		<name>a320_external_idle_distant_side_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleDistSide.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-left-v</property> <!-- not a bug, uses same curves -->
+			<property>/sim/sound/external/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -618,25 +618,25 @@
 		</orientation>
 		<reference-dist>300</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_distant_side_right</name>
+		<name>a320_external_idle_distant_side_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleDistSide.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-right-v</property>
+			<property>/sim/sound/external/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -649,25 +649,25 @@
 		</orientation>
 		<reference-dist>300</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_close_left</name>
+		<name>a320_external_idle_close_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleClose.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleC-left-v</property>
+			<property>/sim/sound/external/idleC-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleC-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -680,25 +680,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_idle_close_right</name>
+		<name>a320_external_idle_close_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-idleClose.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleC-right-v</property>
+			<property>/sim/sound/external/idleC-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleC-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -711,25 +711,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_left</name>
+		<name>a320_external_spool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-left-v</property>
+			<property>/sim/sound/external/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property>
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -742,25 +742,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_right</name>
+		<name>a320_external_spool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property>
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -773,25 +773,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_lowspool_left</name>
+		<name>a320_external_lowspool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/spool-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property>
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -804,25 +804,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_lowspool_right</name>
+		<name>a320_external_lowspool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property>
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -835,25 +835,25 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_close_left</name>
+		<name>a320_external_spool_close_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spoolClose.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/spool-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property>
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -866,25 +866,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_close_right</name>
+		<name>a320_external_spool_close_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spoolClose.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property>
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -897,25 +897,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_closeRear_left</name>
+		<name>a320_external_spool_closeRear_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spoolCloseRear.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/spool-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property>
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -928,25 +928,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_spool_closeRear_right</name>
+		<name>a320_external_spool_closeRear_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-spoolCloseRear.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property>
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -959,25 +959,25 @@
 		</orientation>
 		<reference-dist>30</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_buzz_left</name>
+		<name>a320_external_buzz_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-left-v</property>
+			<property>/sim/sound/external/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-left-p</property>
+			<property>/sim/sound/external/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -990,25 +990,25 @@
 		</orientation>
 		<reference-dist>100</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_buzz_right</name>
+		<name>a320_external_buzz_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-right-v</property>
+			<property>/sim/sound/external/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-right-p</property>
+			<property>/sim/sound/external/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1021,25 +1021,25 @@
 		</orientation>
 		<reference-dist>100</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_buzz_distant_left</name>
+		<name>a320_external_buzz_distant_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-buzzDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/buzz-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-left-p</property>
+			<property>/sim/sound/external/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1052,25 +1052,25 @@
 		</orientation>
 		<reference-dist>250</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_buzz_distant_right</name>
+		<name>a320_external_buzz_distant_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-buzzDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-right-v</property>
+			<property>/sim/sound/external/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-right-p</property>
+			<property>/sim/sound/external/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1083,25 +1083,25 @@
 		</orientation>
 		<reference-dist>250</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_distant_left</name>
+		<name>a320_external_rumble_distant_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumbleDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumbleD-left-v</property>
+			<property>/sim/sound/external/rumbleD-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumbleD-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1111,25 +1111,25 @@
 		</orientation>
 		<reference-dist>1000</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_distant_right</name>
+		<name>a320_external_rumble_distant_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumbleDist.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumbleD-right-v</property>
+			<property>/sim/sound/external/rumbleD-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumbleD-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1139,25 +1139,25 @@
 		</orientation>
 		<reference-dist>1000</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_side_left</name>
+		<name>a320_external_rumble_side_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumbleSide.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/rumble-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1170,25 +1170,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_side_right</name>
+		<name>a320_external_rumble_side_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumbleSide.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1201,25 +1201,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_left</name>
+		<name>a320_external_rumble_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumble.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property>
+			<property>/sim/sound/external/rumble-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1232,25 +1232,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble_right</name>
+		<name>a320_external_rumble_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumble.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1263,25 +1263,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble2_left</name>
+		<name>a320_external_rumble2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumble.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property>
+			<property>/sim/sound/external/rumble-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1294,25 +1294,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_rumble2_right</name>
+		<name>a320_external_rumble2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-rumble.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1325,25 +1325,25 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_reverse_left</name>
+		<name>a320_external_reverse_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/reverse-left-v</property>
+			<property>/sim/sound/external/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/reverse-left-p</property>
+			<property>/sim/sound/external/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1356,25 +1356,25 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_external_reverse_right</name>
+		<name>a320_external_reverse_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/external/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/reverse-right-v</property>
+			<property>/sim/sound/external/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/reverse-right-p</property>
+			<property>/sim/sound/external/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -1387,9 +1387,9 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1400,442 +1400,442 @@
 	
 	<!-- wingaft -->
 	<engine>
-		<name>a320_wingaft_idle_left</name>
+		<name>a320_wingaft_idle_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle-left-v</property>
+			<property>/sim/sound/wingaft/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle-left-p</property>
+			<property>/sim/sound/wingaft/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_idle_right</name>
+		<name>a320_wingaft_idle_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle-right-v</property>
+			<property>/sim/sound/wingaft/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle-right-p</property>
+			<property>/sim/sound/wingaft/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_idle2_left</name>
+		<name>a320_wingaft_idle2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle2-left-v</property>
+			<property>/sim/sound/wingaft/idle2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle2-left-p</property>
+			<property>/sim/sound/wingaft/idle2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_idle2_right</name>
+		<name>a320_wingaft_idle2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle2-right-v</property>
+			<property>/sim/sound/wingaft/idle2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle2-right-p</property>
+			<property>/sim/sound/wingaft/idle2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_lowspool_left</name>
+		<name>a320_wingaft_lowspool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/lowspool-left-v</property>
+			<property>/sim/sound/wingaft/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/lowspool-left-p</property>
+			<property>/sim/sound/wingaft/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_lowspool_right</name>
+		<name>a320_wingaft_lowspool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/lowspool-right-v</property>
+			<property>/sim/sound/wingaft/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/lowspool-right-p</property>
+			<property>/sim/sound/wingaft/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_spool_left</name>
+		<name>a320_wingaft_spool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/spool-left-v</property>
+			<property>/sim/sound/wingaft/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/spool-left-p</property>
+			<property>/sim/sound/wingaft/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_spool_right</name>
+		<name>a320_wingaft_spool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/spool-right-v</property>
+			<property>/sim/sound/wingaft/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/spool-right-p</property>
+			<property>/sim/sound/wingaft/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_hum_left</name>
+		<name>a320_wingaft_hum_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/hum-left-v</property>
+			<property>/sim/sound/wingaft/hum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/hum-left-p</property>
+			<property>/sim/sound/wingaft/hum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_hum_right</name>
+		<name>a320_wingaft_hum_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/hum-right-v</property>
+			<property>/sim/sound/wingaft/hum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/hum-right-p</property>
+			<property>/sim/sound/wingaft/hum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_humfull_left</name>
+		<name>a320_wingaft_humfull_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-humfull.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/fullhum-left-v</property>
+			<property>/sim/sound/wingaft/fullhum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/fullhum-left-p</property>
+			<property>/sim/sound/wingaft/fullhum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_humfull_right</name>
+		<name>a320_wingaft_humfull_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-humfull.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/fullhum-right-v</property>
+			<property>/sim/sound/wingaft/fullhum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/fullhum-right-p</property>
+			<property>/sim/sound/wingaft/fullhum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_comb_left</name>
+		<name>a320_wingaft_comb_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb-left-v</property>
+			<property>/sim/sound/wingaft/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb-left-p</property>
+			<property>/sim/sound/wingaft/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_comb_right</name>
+		<name>a320_wingaft_comb_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb-right-v</property>
+			<property>/sim/sound/wingaft/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb-right-p</property>
+			<property>/sim/sound/wingaft/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_comb2_left</name>
+		<name>a320_wingaft_comb2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb2-left-v</property>
+			<property>/sim/sound/wingaft/comb2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb2-left-p</property>
+			<property>/sim/sound/wingaft/comb2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_comb2_right</name>
+		<name>a320_wingaft_comb2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb2-right-v</property>
+			<property>/sim/sound/wingaft/comb2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb2-right-p</property>
+			<property>/sim/sound/wingaft/comb2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_buzz_left</name>
+		<name>a320_wingaft_buzz_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/buzz-left-v</property>
+			<property>/sim/sound/wingaft/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/buzz-left-p</property>
+			<property>/sim/sound/wingaft/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_buzz_right</name>
+		<name>a320_wingaft_buzz_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/buzz-right-v</property>
+			<property>/sim/sound/wingaft/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/buzz-right-p</property>
+			<property>/sim/sound/wingaft/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_reverse_left</name>
+		<name>a320_wingaft_reverse_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/reverse-left-v</property>
+			<property>/sim/sound/wingaft/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/reverse-left-p</property>
+			<property>/sim/sound/wingaft/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingaft_reverse_right</name>
+		<name>a320_wingaft_reverse_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingaft/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/reverse-right-v</property>
+			<property>/sim/sound/wingaft/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/reverse-right-p</property>
+			<property>/sim/sound/wingaft/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1851,398 +1851,398 @@
 	
 	<!-- wingfwd -->
 	<engine>
-		<name>a320_wingfwd_idle_left</name>
+		<name>a320_wingfwd_idle_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle-left-v</property>
+			<property>/sim/sound/wingfwd/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle-left-p</property>
+			<property>/sim/sound/wingfwd/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_idle_right</name>
+		<name>a320_wingfwd_idle_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-idle.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle-right-v</property>
+			<property>/sim/sound/wingfwd/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle-right-p</property>
+			<property>/sim/sound/wingfwd/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_idle2_left</name>
+		<name>a320_wingfwd_idle2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle2-left-v</property>
+			<property>/sim/sound/wingfwd/idle2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle2-left-p</property>
+			<property>/sim/sound/wingfwd/idle2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_idle2_right</name>
+		<name>a320_wingfwd_idle2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-idle2.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle2-right-v</property>
+			<property>/sim/sound/wingfwd/idle2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle2-right-p</property>
+			<property>/sim/sound/wingfwd/idle2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_lowspool_left</name>
+		<name>a320_wingfwd_lowspool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/lowspool-left-v</property>
+			<property>/sim/sound/wingfwd/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/lowspool-left-p</property>
+			<property>/sim/sound/wingfwd/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_lowspool_right</name>
+		<name>a320_wingfwd_lowspool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/lowspool-right-v</property>
+			<property>/sim/sound/wingfwd/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/lowspool-right-p</property>
+			<property>/sim/sound/wingfwd/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_spool_left</name>
+		<name>a320_wingfwd_spool_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/spool-left-v</property>
+			<property>/sim/sound/wingfwd/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/spool-left-p</property>
+			<property>/sim/sound/wingfwd/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_spool_right</name>
+		<name>a320_wingfwd_spool_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-lowspool.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/spool-right-v</property>
+			<property>/sim/sound/wingfwd/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/spool-right-p</property>
+			<property>/sim/sound/wingfwd/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_hum_left</name>
+		<name>a320_wingfwd_hum_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/hum-left-v</property>
+			<property>/sim/sound/wingfwd/hum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/hum-left-p</property>
+			<property>/sim/sound/wingfwd/hum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_hum_right</name>
+		<name>a320_wingfwd_hum_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-hum.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/hum-right-v</property>
+			<property>/sim/sound/wingfwd/hum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/hum-right-p</property>
+			<property>/sim/sound/wingfwd/hum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_comb_left</name>
+		<name>a320_wingfwd_comb_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb-left-v</property>
+			<property>/sim/sound/wingfwd/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb-left-p</property>
+			<property>/sim/sound/wingfwd/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_comb_right</name>
+		<name>a320_wingfwd_comb_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-comb.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb-right-v</property>
+			<property>/sim/sound/wingfwd/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb-right-p</property>
+			<property>/sim/sound/wingfwd/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_comb2_left</name>
+		<name>a320_wingfwd_comb2_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb2-left-v</property>
+			<property>/sim/sound/wingfwd/comb2-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb2-left-p</property>
+			<property>/sim/sound/wingfwd/comb2-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_comb2_right</name>
+		<name>a320_wingfwd_comb2_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-comb-full.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb2-right-v</property>
+			<property>/sim/sound/wingfwd/comb2-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb2-right-p</property>
+			<property>/sim/sound/wingfwd/comb2-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_buzz_left</name>
+		<name>a320_wingfwd_buzz_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/buzz-left-v</property>
+			<property>/sim/sound/wingfwd/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/buzz-left-p</property>
+			<property>/sim/sound/wingfwd/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_buzz_right</name>
+		<name>a320_wingfwd_buzz_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-buzz.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/buzz-right-v</property>
+			<property>/sim/sound/wingfwd/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/buzz-right-p</property>
+			<property>/sim/sound/wingfwd/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_reverse_left</name>
+		<name>a320_wingfwd_reverse_1</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/reverse-left-v</property>
+			<property>/sim/sound/wingfwd/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/reverse-left-p</property>
+			<property>/sim/sound/wingfwd/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
 	<engine>
-		<name>a320_wingfwd_reverse_right</name>
+		<name>a320_wingfwd_reverse_2</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/CFM56B/wingfwd/cfm-reverse.wav</path>
 		<condition>
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/reverse-right-v</property>
+			<property>/sim/sound/wingfwd/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/reverse-right-p</property>
+			<property>/sim/sound/wingfwd/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
   </fx>

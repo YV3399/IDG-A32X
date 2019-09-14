@@ -5,13 +5,13 @@
 	<engine>
 		<name>a320_a1s</name>
 		<mode>looped</mode>
-		<path>FL2070/abn1strt.wav</path>
+		<path>NEO/abn1strt.wav</path>
 		<volume>
-			<property>a320/sound/a1strt</property>
+			<property>/sim/sound/a1strt</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a1strtp</property>
+			<property>/sim/sound/a1strtp</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -24,13 +24,13 @@
 	<engine>
 		<name>a320_b1s</name>
 		<mode>looped</mode>
-		<path>FL2070/abn1strt.wav</path>
+		<path>NEO/abn1strt.wav</path>
 		<volume>
-			<property>a320/sound/b1strt</property>
+			<property>/sim/sound/b1strt</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b1strtp</property>
+			<property>/sim/sound/b1strtp</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -48,20 +48,20 @@
 	<engine>
 		<name>a320_a11</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm11a.wav</path>
+		<path>NEO/cfm11a.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a11</property>
+			<property>/sim/sound/a11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a11p</property>
+			<property>/sim/sound/a11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -74,20 +74,20 @@
 	<engine>
 		<name>a320_a12</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm12a.wav</path>
+		<path>NEO/cfm12a.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a12</property>
+			<property>/sim/sound/a12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a12p</property>
+			<property>/sim/sound/a12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -100,20 +100,20 @@
 	<engine>
 		<name>a320_a13</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm13a.wav</path>
+		<path>NEO/cfm13a.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a13</property>
+			<property>/sim/sound/a13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a13p</property>
+			<property>/sim/sound/a13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -126,20 +126,20 @@
 	<engine>
 		<name>a320_b11</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm11b.wav</path>
+		<path>NEO/cfm11b.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b11</property>
+			<property>/sim/sound/b11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b11p</property>
+			<property>/sim/sound/b11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -152,20 +152,20 @@
 	<engine>
 		<name>a320_b12</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm12b.wav</path>
+		<path>NEO/cfm12b.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b12</property>
+			<property>/sim/sound/b12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b12p</property>
+			<property>/sim/sound/b12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -178,20 +178,20 @@
 	<engine>
 		<name>a320_b13</name>
 		<mode>looped</mode>
-		<path>FL2070-NEO/cfm13b.wav</path>
+		<path>NEO/cfm13b.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<less-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-2</value>
 			</less-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b13</property>
+			<property>/sim/sound/b13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b13p</property>
+			<property>/sim/sound/b13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -213,20 +213,20 @@
 	<engine>
 		<name>a320_a21</name>
 		<mode>looped</mode>
-		<path>FL2070/axx21.wav</path>
+		<path>NEO/axx21.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a11</property>
+			<property>/sim/sound/a11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a11p</property>
+			<property>/sim/sound/a11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -239,20 +239,20 @@
 	<engine>
 		<name>a320_a22</name>
 		<mode>looped</mode>
-		<path>FL2070/axx22.wav</path>
+		<path>NEO/axx22.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a12</property>
+			<property>/sim/sound/a12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a12p</property>
+			<property>/sim/sound/a12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -265,20 +265,20 @@
 	<engine>
 		<name>a320_a23</name>
 		<mode>looped</mode>
-		<path>FL2070/axx23.wav</path>
+		<path>NEO/axx23.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/a13</property>
+			<property>/sim/sound/a13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a13p</property>
+			<property>/sim/sound/a13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -291,22 +291,22 @@
 	
 	<engine>
 		<name>a320_b21</name>
-		<property>sim/current-view/internal</property>
+		<property>/sim/current-view/internal</property>
 		<mode>looped</mode>
-		<path>FL2070/axx21.wav</path>
+		<path>NEO/axx21.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b11</property>
+			<property>/sim/sound/b11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b11p</property>
+			<property>/sim/sound/b11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -319,20 +319,20 @@
 	<engine>
 		<name>a320_b22</name>
 		<mode>looped</mode>
-		<path>FL2070/axx22.wav</path>
+		<path>NEO/axx22.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b12</property>
+			<property>/sim/sound/b12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b12p</property>
+			<property>/sim/sound/b12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -345,20 +345,20 @@
 	<engine>
 		<name>a320_b23</name>
 		<mode>looped</mode>
-		<path>FL2070/axx23.wav</path>
+		<path>NEO/axx23.wav</path>
 		<condition>
-			<property>sim/current-view/internal</property>
+			<property>/sim/current-view/internal</property>
 			<greater-than>
-				<property>sim/current-view/z-offset-m</property>
+				<property>/sim/current-view/z-offset-m</property>
 				<value>-1.9</value>
 			</greater-than>
 		</condition>
 		<volume>
-			<property>a320/sound/b13</property>
+			<property>/sim/sound/b13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b13p</property>
+			<property>/sim/sound/b13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -377,16 +377,16 @@
 	<engine>
 		<name>xa320_a11</name>
 		<mode>looped</mode>
-		<path>FL2070/xabn11.wav</path>
+		<path>NEO/xabn11.wav</path>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<volume>
-			<property>a320/sound/a11</property>
+			<property>/sim/sound/a11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a11p</property>
+			<property>/sim/sound/a11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -399,16 +399,16 @@
 	<engine>
 		<name>xa320_a12</name>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<mode>looped</mode>
-		<path>FL2070/xabn12.wav</path>
+		<path>NEO/xabn12.wav</path>
 		<volume>
-			<property>a320/sound/a12</property>
+			<property>/sim/sound/a12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a12p</property>
+			<property>/sim/sound/a12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -421,16 +421,16 @@
 	<engine>
 		<name>xa320_a13</name>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<mode>looped</mode>
-		<path>FL2070/xabn13.wav</path>
+		<path>NEO/xabn13.wav</path>
 		<volume>
-			<property>a320/sound/a13</property>
+			<property>/sim/sound/a13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/a13p</property>
+			<property>/sim/sound/a13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -444,16 +444,16 @@
 	<engine>
 		<name>xa320_b11</name>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<mode>looped</mode>
-		<path>FL2070/xabn11.wav</path>
+		<path>NEO/xabn11.wav</path>
 		<volume>
-			<property>a320/sound/b11</property>
+			<property>/sim/sound/b11</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b11p</property>
+			<property>/sim/sound/b11p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -466,16 +466,16 @@
 	<engine>
 		<name>xa320_b12</name>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<mode>looped</mode>
-		<path>FL2070/xabn12.wav</path>
+		<path>NEO/xabn12.wav</path>
 		<volume>
-			<property>a320/sound/b12</property>
+			<property>/sim/sound/b12</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b12p</property>
+			<property>/sim/sound/b12p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
@@ -488,16 +488,16 @@
 	<engine>
 		<name>xa320_b13</name>
 		<condition>
-			<not><property>sim/current-view/internal</property></not>
+			<not><property>/sim/current-view/internal</property></not>
 		</condition>
 		<mode>looped</mode>
-		<path>FL2070/xabn13.wav</path>
+		<path>NEO/xabn13.wav</path>
 		<volume>
-			<property>a320/sound/b13</property>
+			<property>/sim/sound/b13</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/b13p</property>
+			<property>/sim/sound/b13p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>

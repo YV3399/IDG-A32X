@@ -9,13 +9,6 @@
 		
 		<status>Pre V1.0</status>
 		
-		<rating>
-			<FDM type="int">4</FDM>
-			<systems type="int">5</systems>
-			<cockpit type="int">5</cockpit>
-			<model type="int">4</model>
-		</rating>
-		
 		<hud n="0">
 			<enable3d n="0">false</enable3d>
 			<enable3d n="1">false</enable3d>
@@ -167,6 +160,9 @@
 				<path>Aircraft/IDG-A32X/Systems/pfd.xml</path>
 			</autopilot>
 			<!-- 10 is sound -->
+			<autopilot n="11">
+				<path>Aircraft/IDG-A32X/Systems/sound-common.xml</path>
+			</autopilot>
 		</systems>
 		
 		<sound>

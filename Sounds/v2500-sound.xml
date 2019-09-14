@@ -4,6 +4,86 @@
   <fx>
 	<!-- cockpit -->
 	<engine>
+		<name>a320_startup_left</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/start/v2500-start1.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[0]/state</property>
+					<value>1</value>
+				</equals>
+				<property>/sim/sound/internal-custom</property>
+			</and>
+		</condition>
+		<position>
+			<x>0</x>
+			<y>20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_startup_right</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/start/v2500-start1.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[1]/state</property>
+					<value>1</value>
+				</equals>
+				<property>/sim/sound/internal-custom</property>
+			</and>
+		</condition>
+		<position>
+			<x>0</x>
+			<y>-20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_startup_left_2</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/start/v2500-start2.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[0]/state</property>
+					<value>2</value>
+				</equals>
+				<property>/sim/sound/internal-custom</property>
+			</and>
+		</condition>
+		<position>
+			<x>0</x>
+			<y>20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_startup_right_2</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/start/v2500-start2.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[1]/state</property>
+					<value>2</value>
+				</equals>
+				<property>/sim/sound/internal-custom</property>
+			</and>
+		</condition>
+		<position>
+			<x>0</x>
+			<y>-20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
 		<name>a320_cockpit_idle_left</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/cockpit/v2500-idle.wav</path>
@@ -11,17 +91,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle-left-v</property>
+			<property>/sim/sound/cockpit/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle-left-p</property>
+			<property>/sim/sound/cockpit/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -33,17 +113,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/idle-right-v</property>
+			<property>/sim/sound/cockpit/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/idle-right-p</property>
+			<property>/sim/sound/cockpit/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -55,17 +135,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/lowspool-left-v</property>
+			<property>/sim/sound/cockpit/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/lowspool-left-p</property>
+			<property>/sim/sound/cockpit/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -77,17 +157,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/lowspool-right-v</property>
+			<property>/sim/sound/cockpit/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/lowspool-right-p</property>
+			<property>/sim/sound/cockpit/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -99,17 +179,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb-left-v</property>
+			<property>/sim/sound/cockpit/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb-left-p</property>
+			<property>/sim/sound/cockpit/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -121,17 +201,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/comb-right-v</property>
+			<property>/sim/sound/cockpit/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/comb-right-p</property>
+			<property>/sim/sound/cockpit/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -143,17 +223,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/buzz-left-v</property>
+			<property>/sim/sound/cockpit/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/buzz-left-p</property>
+			<property>/sim/sound/cockpit/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -165,17 +245,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/buzz-right-v</property>
+			<property>/sim/sound/cockpit/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/buzz-right-p</property>
+			<property>/sim/sound/cockpit/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -187,17 +267,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/reverse-left-v</property>
+			<property>/sim/sound/cockpit/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/reverse-left-p</property>
+			<property>/sim/sound/cockpit/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -209,17 +289,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/cockpit/reverse-right-v</property>
+			<property>/sim/sound/cockpit/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/cockpit/reverse-right-p</property>
+			<property>/sim/sound/cockpit/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -232,6 +312,180 @@
 	
 	<!-- outside -->
 	<engine>
+		<name>a320_external_starter_left</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-starter.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[0]/state</property>
+					<value>1</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>225</inner-angle>
+			<outer-angle>135</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>30</reference-dist>
+		<position>
+			<x>0</x>
+			<y>20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_external_starter_right</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-starter.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[1]/state</property>
+					<value>1</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>225</inner-angle>
+			<outer-angle>135</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>30</reference-dist>
+		<position>
+			<x>0</x>
+			<y>-20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_external_startup_left</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-startup.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[0]/state</property>
+					<value>2</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>225</inner-angle>
+			<outer-angle>135</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>30</reference-dist>
+		<position>
+			<x>0</x>
+			<y>20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_external_startup_right</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-startup.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[1]/state</property>
+					<value>2</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>225</inner-angle>
+			<outer-angle>135</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>30</reference-dist>
+		<position>
+			<x>0</x>
+			<y>-20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_external_startup_rear</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-startup-rear.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[0]/state</property>
+					<value>2</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>45</inner-angle>
+			<outer-angle>315</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>60</reference-dist>
+		<position>
+			<x>0</x>
+			<y>20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
+		<name>a320_external_startup_right_rear</name>
+		<mode>once</mode>
+		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-startup-rear.wav</path>
+		<condition>
+			<and>
+				<equals>
+					<property>/engines/engine[1]/state</property>
+					<value>2</value>
+				</equals>
+				<not><property>/sim/sound/internal-custom</property></not>
+			</and>
+		</condition>
+		<orientation>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+			<inner-angle>45</inner-angle>
+			<outer-angle>315</outer-angle>
+			<outer-gain>0.01</outer-gain>
+		</orientation>
+		<reference-dist>60</reference-dist>
+		<position>
+			<x>0</x>
+			<y>-20</y>
+			<z>0</z>
+		</position>
+	</engine>
+	
+	<engine>
 		<name>a320_external_idle_left</name>
 		<mode>looped</mode>
 		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-idle.wav</path>
@@ -239,11 +493,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-left-v</property>
+			<property>/sim/sound/external/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -256,9 +510,9 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -270,11 +524,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idle-right-v</property>
+			<property>/sim/sound/external/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idle-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -287,9 +541,9 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -301,11 +555,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleR-left-v</property>
+			<property>/sim/sound/external/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleR-left-p</property>
+			<property>/sim/sound/external/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -318,9 +572,9 @@
 		</orientation>
 		<reference-dist>60</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -332,11 +586,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/idleR-right-v</property>
+			<property>/sim/sound/external/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/idleR-right-p</property>
+			<property>/sim/sound/external/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -349,71 +603,9 @@
 		</orientation>
 		<reference-dist>60</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
-		</position>
-	</engine>
-	
-	<engine>
-		<name>a320_external_idle_close_left</name>
-		<mode>looped</mode>
-		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-idleClose.wav</path>
-		<condition>
-			<property>/sim/sound/suppress-warning</property>
-		</condition>
-		<volume>
-			<property>a320/sound/external/idleC-left-v</property>
-			<offset>0</offset>
-		</volume>
-		<pitch>
-			<property>a320/sound/external/idleC-left-p</property>
-			<offset>0</offset>
-		</pitch>
-		<orientation>
-			<x>-1</x>
-			<y>0</y>
 			<z>0</z>
-			<inner-angle>270</inner-angle>
-			<outer-angle>90</outer-angle>
-			<outer-gain>0.01</outer-gain>
-		</orientation>
-		<reference-dist>30</reference-dist>
-		<position>
-			<x>00</x>
-			<y>20</y>
-			<z>00</z>
-		</position>
-	</engine>
-	
-	<engine>
-		<name>a320_external_idle_close_right</name>
-		<mode>looped</mode>
-		<path>Aircraft/IDG-A32X/Sounds/SASA/V2500/external/v2500-idleClose.wav</path>
-		<condition>
-			<property>/sim/sound/suppress-warning</property>
-		</condition>
-		<volume>
-			<property>a320/sound/external/idleC-right-v</property>
-			<offset>0</offset>
-		</volume>
-		<pitch>
-			<property>a320/sound/external/idleC-right-p</property>
-			<offset>0</offset>
-		</pitch>
-		<orientation>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-			<inner-angle>270</inner-angle>
-			<outer-angle>90</outer-angle>
-			<outer-gain>0.01</outer-gain>
-		</orientation>
-		<reference-dist>30</reference-dist>
-		<position>
-			<x>00</x>
-			<y>-20</y>
-			<z>00</z>
 		</position>
 	</engine>
 	
@@ -425,11 +617,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-left-v</property>
+			<property>/sim/sound/external/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property>
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -442,9 +634,9 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -456,11 +648,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/spool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property>
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -473,9 +665,9 @@
 		</orientation>
 		<reference-dist>90</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -487,11 +679,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/lowspool-left-v</property>
+			<property>/sim/sound/external/spool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-left-p</property> <!-- not a bug, uses same curves -->
+			<property>/sim/sound/external/spool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -504,9 +696,9 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -518,11 +710,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/lowspool-right-v</property>
+			<property>/sim/sound/external/spool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/spool-right-p</property> <!-- not a bug, uses same curves -->
+			<property>/sim/sound/external/spool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -535,9 +727,9 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -549,11 +741,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-left-v</property>
+			<property>/sim/sound/external/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-left-p</property>
+			<property>/sim/sound/external/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -566,9 +758,9 @@
 		</orientation>
 		<reference-dist>150</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -580,11 +772,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-right-v</property>
+			<property>/sim/sound/external/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-right-p</property>
+			<property>/sim/sound/external/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -597,9 +789,9 @@
 		</orientation>
 		<reference-dist>150</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -611,11 +803,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-left-v</property>
+			<property>/sim/sound/external/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-left-p</property>
+			<property>/sim/sound/external/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -628,9 +820,9 @@
 		</orientation>
 		<reference-dist>150</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -642,11 +834,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/buzz-right-v</property>
+			<property>/sim/sound/external/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/buzz-right-p</property>
+			<property>/sim/sound/external/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -659,9 +851,9 @@
 		</orientation>
 		<reference-dist>150</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -673,11 +865,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/rumble-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -687,9 +879,9 @@
 		</orientation>
 		<reference-dist>1500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -701,11 +893,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -715,9 +907,9 @@
 		</orientation>
 		<reference-dist>1500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -729,11 +921,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/rumble-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -746,9 +938,9 @@
 		</orientation>
 		<reference-dist>200</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -760,11 +952,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -777,9 +969,9 @@
 		</orientation>
 		<reference-dist>200</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -791,11 +983,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/rumble-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-left-p</property>
+			<property>/sim/sound/external/rumble-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -808,9 +1000,9 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -822,11 +1014,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble-right-p</property>
+			<property>/sim/sound/external/rumble-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -839,9 +1031,9 @@
 		</orientation>
 		<reference-dist>120</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -853,11 +1045,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-left-v</property> <!-- not a bug, uses same curve -->
+			<property>/sim/sound/external/rumble-1-v</property> <!-- not a bug, uses same curve -->
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble2-left-p</property> <!-- not a bug, uses different curve -->
+			<property>/sim/sound/external/rumble2-1-p</property> <!-- not a bug, uses different curve -->
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -870,9 +1062,9 @@
 		</orientation>
 		<reference-dist>110</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -884,11 +1076,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/rumble-right-v</property>
+			<property>/sim/sound/external/rumble-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/rumble2-right-p</property> <!-- not a bug, uses different curve -->
+			<property>/sim/sound/external/rumble2-2-p</property> <!-- not a bug, uses different curve -->
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -901,9 +1093,9 @@
 		</orientation>
 		<reference-dist>110</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -915,11 +1107,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/reverse-left-v</property>
+			<property>/sim/sound/external/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/reverse-left-p</property>
+			<property>/sim/sound/external/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -932,9 +1124,9 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -946,11 +1138,11 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/external/reverse-right-v</property>
+			<property>/sim/sound/external/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/external/reverse-right-p</property>
+			<property>/sim/sound/external/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<orientation>
@@ -963,9 +1155,9 @@
 		</orientation>
 		<reference-dist>500</reference-dist>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -980,17 +1172,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle-left-v</property>
+			<property>/sim/sound/wingaft/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle-left-p</property>
+			<property>/sim/sound/wingaft/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1002,17 +1194,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/idle-right-v</property>
+			<property>/sim/sound/wingaft/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/idle-right-p</property>
+			<property>/sim/sound/wingaft/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1024,17 +1216,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/whine-left-v</property>
+			<property>/sim/sound/wingaft/whine-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/whine-left-p</property>
+			<property>/sim/sound/wingaft/whine-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1046,17 +1238,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/whine-right-v</property>
+			<property>/sim/sound/wingaft/whine-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/whine-right-p</property>
+			<property>/sim/sound/wingaft/whine-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1068,17 +1260,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/lowspool-left-v</property>
+			<property>/sim/sound/wingaft/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/lowspool-left-p</property>
+			<property>/sim/sound/wingaft/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1090,17 +1282,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/lowspool-right-v</property>
+			<property>/sim/sound/wingaft/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/lowspool-right-p</property>
+			<property>/sim/sound/wingaft/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1112,17 +1304,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb-left-v</property>
+			<property>/sim/sound/wingaft/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb-left-p</property>
+			<property>/sim/sound/wingaft/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1134,17 +1326,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/comb-right-v</property>
+			<property>/sim/sound/wingaft/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/comb-right-p</property>
+			<property>/sim/sound/wingaft/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1156,17 +1348,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/fullhum-left-v</property>
+			<property>/sim/sound/wingaft/fullhum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/fullhum-left-p</property>
+			<property>/sim/sound/wingaft/fullhum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1178,17 +1370,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/fullhum-right-v</property>
+			<property>/sim/sound/wingaft/fullhum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/fullhum-right-p</property>
+			<property>/sim/sound/wingaft/fullhum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1200,17 +1392,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/reverse-left-v</property>
+			<property>/sim/sound/wingaft/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/reverse-left-p</property>
+			<property>/sim/sound/wingaft/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1222,17 +1414,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingaft/reverse-right-v</property>
+			<property>/sim/sound/wingaft/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingaft/reverse-right-p</property>
+			<property>/sim/sound/wingaft/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1255,17 +1447,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle-left-v</property>
+			<property>/sim/sound/wingfwd/idle-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle-left-p</property>
+			<property>/sim/sound/wingfwd/idle-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1277,17 +1469,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/idle-right-v</property>
+			<property>/sim/sound/wingfwd/idle-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/idle-right-p</property>
+			<property>/sim/sound/wingfwd/idle-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1299,17 +1491,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/lowspool-left-v</property>
+			<property>/sim/sound/wingfwd/lowspool-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/lowspool-left-p</property>
+			<property>/sim/sound/wingfwd/lowspool-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1321,17 +1513,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/lowspool-right-v</property>
+			<property>/sim/sound/wingfwd/lowspool-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/lowspool-right-p</property>
+			<property>/sim/sound/wingfwd/lowspool-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1343,17 +1535,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb-left-v</property>
+			<property>/sim/sound/wingfwd/comb-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb-left-p</property>
+			<property>/sim/sound/wingfwd/comb-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1365,17 +1557,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/comb-right-v</property>
+			<property>/sim/sound/wingfwd/comb-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/comb-right-p</property>
+			<property>/sim/sound/wingfwd/comb-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1387,17 +1579,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/fullhum-left-v</property>
+			<property>/sim/sound/wingfwd/fullhum-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/fullhum-left-p</property>
+			<property>/sim/sound/wingfwd/fullhum-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1409,17 +1601,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/fullhum-right-v</property>
+			<property>/sim/sound/wingfwd/fullhum-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/fullhum-right-p</property>
+			<property>/sim/sound/wingfwd/fullhum-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1431,17 +1623,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/buzz-left-v</property>
+			<property>/sim/sound/wingfwd/buzz-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/buzz-left-p</property>
+			<property>/sim/sound/wingfwd/buzz-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1453,17 +1645,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/buzz-right-v</property>
+			<property>/sim/sound/wingfwd/buzz-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/buzz-right-p</property>
+			<property>/sim/sound/wingfwd/buzz-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1475,17 +1667,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/reverse-left-v</property>
+			<property>/sim/sound/wingfwd/reverse-1-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/reverse-left-p</property>
+			<property>/sim/sound/wingfwd/reverse-1-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
 	
@@ -1497,17 +1689,17 @@
 			<property>/sim/sound/suppress-warning</property>
 		</condition>
 		<volume>
-			<property>a320/sound/wingfwd/reverse-right-v</property>
+			<property>/sim/sound/wingfwd/reverse-2-v</property>
 			<offset>0</offset>
 		</volume>
 		<pitch>
-			<property>a320/sound/wingfwd/reverse-right-p</property>
+			<property>/sim/sound/wingfwd/reverse-2-p</property>
 			<offset>0</offset>
 		</pitch>
 		<position>
-			<x>00</x>
+			<x>0</x>
 			<y>-20</y>
-			<z>00</z>
+			<z>0</z>
 		</position>
 	</engine>
   </fx>
