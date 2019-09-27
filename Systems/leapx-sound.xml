@@ -10,7 +10,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[0]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
@@ -23,7 +22,7 @@
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/engines/a1strt</prop>
+    <prop>/sim/sound/a1strt</prop>
   </output>
 </filter>
 
@@ -33,7 +32,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[0]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
@@ -45,7 +43,7 @@
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/engines/a1strtp</prop>
+    <prop>/sim/sound/a1strtp</prop>
   </output>
 </filter>
 
@@ -67,7 +65,7 @@
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/engines/b1strt</prop>
+    <prop>/sim/sound/b1strt</prop>
   </output>
 </filter>
 
@@ -88,7 +86,7 @@
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/engines/b1strtp</prop>
+    <prop>/sim/sound/b1strtp</prop>
   </output>
 </filter>
 
@@ -122,7 +120,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[0]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
@@ -144,7 +141,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[1]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
@@ -166,7 +162,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[0]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.32</ind> <dep>0.00</dep></entry>
@@ -188,7 +183,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[1]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.32</ind> <dep>0.00</dep></entry>
@@ -210,7 +204,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[0]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
@@ -231,7 +224,6 @@
   <input>
     <expression>
       <product>
-		<property>/systems/acconfig/options/sound/interior-volume</property>
         <table>
           <product><property>/engines/engine[1]/n1-actual</property><value>0.01</value>  </product>
 			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
@@ -443,6 +435,28 @@
 
 
 
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/sim/current-view/z-offset-m</property><value>1</value>  </product>
+            <entry><ind>-5.0</ind> <dep>0.11</dep></entry>
+			<entry><ind>0.00</ind> <dep>1.00</dep></entry>
+			<entry><ind>15.0</ind> <dep>0.11</dep></entry>
+        </table>
+		<property>sim/current-view/internal</property>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>sim/sound/other/flaps</prop>
+  </output>
+</filter>
+
 <filter>
   <type>gain</type>
   <gain>1</gain>
@@ -455,13 +469,12 @@
 			<entry><ind>0.00</ind> <dep>1.00</dep></entry>
 			<entry><ind>22.0</ind> <dep>0.10</dep></entry>
         </table>
-		<property>/sim/current-view/internal</property>
-		<property>/systems/acconfig/options/sound/mechanical-volume</property>
+		<property>sim/current-view/internal</property>
       </product>
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/other/gear</prop>
+    <prop>sim/sound/other/gear</prop>
   </output>
 </filter>
 
@@ -476,13 +489,12 @@
 			<entry><ind>300</ind>  <dep>1.00</dep></entry>
 			<entry><ind>301</ind>  <dep>0.00</dep></entry>
         </table>
-		<property>/sim/current-view/internal</property>
-		<property>/systems/acconfig/options/sound/avionics-volume</property>
+		<property>sim/current-view/internal</property>
       </product>
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/other/callout</prop>
+    <prop>sim/sound/other/callout</prop>
   </output>
 </filter>
 
@@ -497,13 +509,12 @@
             <entry><ind>-11</ind>  <dep>0.00</dep></entry>
 			<entry><ind>-12</ind>  <dep>1.00</dep></entry>
         </table>
-		<property>/sim/current-view/internal</property>
-		<property>/systems/acconfig/options/sound/avionics-volume</property>
+		<property>sim/current-view/internal</property>
       </product>
     </expression> 
   </input>
   <output>
-    <prop>/sim/sound/other/callout2</prop>
+    <prop>sim/sound/other/callout2</prop>
   </output>
 </filter>
 
@@ -521,13 +532,12 @@
                     <entry><ind>250</ind>  <dep>0.10</dep></entry>
                     <entry><ind>550</ind>  <dep>0.30</dep></entry>
                 </table>
-                <property>/sim/current-view/internal</property>
-				<property>/systems/acconfig/options/sound/effects-volume</property>
+                <property>sim/current-view/internal</property>
             </product>
         </expression> 
     </input>
     <output>
-        <prop>/sim/sound/other/cockpit-wind</prop>
+        <prop>sim/sound/other/cockpit-wind</prop>
     </output>
 </filter>
 
@@ -537,13 +547,12 @@
     <input>
 		<condition>
 			<or>
-				<property>/sim/sound/wingview-aft</property>
-				<property>/sim/sound/wingview-fwd</property>
+				<property>sim/sound/wingview-aft</property>
+				<property>sim/sound/wingview-fwd</property>
 			</or>
 		</condition>
         <expression>
             <product>
-				<property>/systems/acconfig/options/sound/effects-volume</property>
                 <table>
                     <product><property>/velocities/groundspeed-kt</property><value>1</value>  </product>
                     <entry><ind>0.00</ind> <dep>0.0001</dep></entry>
@@ -559,17 +568,17 @@
 		<condition>
 			<and>
 				<not>
-					<property>/sim/sound/wingview-aft</property>
+					<property>sim/sound/wingview-aft</property>
 				</not>
 				<not>
-					<property>/sim/sound/wingview-fwd</property>
+					<property>sim/sound/wingview-fwd</property>
 				</not>
 			</and>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-        <prop>/sim/sound/other/wind</prop>
+        <prop>sim/sound/other/wind</prop>
     </output>
 </filter>
 
@@ -584,12 +593,12 @@
                 <entry><ind>0.00</ind> <dep>0.50</dep></entry>
                 <entry><ind>550</ind>  <dep>1.00</dep></entry>
             </table>
-            <property>/sim/sound/internal-custom</property>
+            <property>sim/sound/internal-custom</property>
         </product>
     </expression> 
     </input>
     <output>
-        <prop>/sim/sound/other/windp</prop>
+        <prop>sim/sound/other/windp</prop>
     </output>
 </filter>
 
@@ -598,31 +607,28 @@
     <gain>1</gain>
     <input>
 		<condition>
-			<property>/sim/current-view/internal</property>
+			<property>sim/current-view/internal</property>
 		</condition>
 		<expression>
-			<product>
-				<table>
-					<product>
-						<property>/velocities/groundspeed-kt</property>
-						<value>1</value>  
-					</product>
-					<entry><ind>010</ind>  <dep>0.00</dep></entry>
-					<entry><ind>110</ind>  <dep>0.50</dep></entry>
-					<entry><ind>140</ind>  <dep>1.00</dep></entry>
-				</table>
-				<property>/systems/acconfig/options/sound/effects-volume</property>
-			</product>
+			<table>
+				<product>
+					<property>/velocities/groundspeed-kt</property>
+					<value>1</value>  
+				</product>
+				<entry><ind>010</ind>  <dep>0.00</dep></entry>
+				<entry><ind>110</ind>  <dep>0.50</dep></entry>
+				<entry><ind>140</ind>  <dep>1.00</dep></entry>
+			</table>
 		</expression> 
     </input>
 	<input>
 		<condition>
-			<not><property>/sim/current-view/internal</property></not>
+			<not><property>sim/current-view/internal</property></not>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-		<prop>/sim/sound/other/cockpit-roll</prop>
+		<prop>sim/sound/other/cockpit-roll</prop>
     </output>
 </filter>
 
@@ -632,40 +638,37 @@
     <input>
 		<condition>
 			<or>
-				<property>/sim/sound/wingview-aft</property>
-				<property>/sim/sound/wingview-fwd</property>
+				<property>sim/sound/wingview-aft</property>
+				<property>sim/sound/wingview-fwd</property>
 			</or>
 		</condition>
 		<expression>
-			<product>
-				<table>
-					<product>
-						<property>/velocities/groundspeed-kt</property>
-						<value>1</value>  
-					</product>
-					<entry><ind>010</ind>  <dep>0.00</dep></entry>
-					<entry><ind>110</ind>  <dep>0.50</dep></entry>
-					<entry><ind>140</ind>  <dep>1.00</dep></entry>
-				</table>
-				<property>/systems/acconfig/options/sound/effects-volume</property>
-			</product>
+			<table>
+				<product>
+					<property>/velocities/groundspeed-kt</property>
+					<value>1</value>  
+				</product>
+				<entry><ind>010</ind>  <dep>0.00</dep></entry>
+				<entry><ind>110</ind>  <dep>0.50</dep></entry>
+				<entry><ind>140</ind>  <dep>1.00</dep></entry>
+			</table>
 		</expression> 
     </input>
 	<input>
 		<condition>
 			<and>
 				<not>
-					<property>/sim/sound/wingview-aft</property>
+					<property>sim/sound/wingview-aft</property>
 				</not>
 				<not>
-					<property>/sim/sound/wingview-fwd</property>
+					<property>sim/sound/wingview-fwd</property>
 				</not>
 			</and>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-		<prop>/sim/sound/other/roll</prop>
+		<prop>sim/sound/other/roll</prop>
     </output>
 </filter>
 
@@ -675,32 +678,27 @@
     <input>
 		<condition>
 			<or>
-				<property>/sim/sound/wingview-aft</property>
-				<property>/sim/sound/wingview-fwd</property>
+				<property>sim/sound/wingview-aft</property>
+				<property>sim/sound/wingview-fwd</property>
 			</or>
 		</condition>
-		<expression>
-			<product>
-				<value>1</value>
-				<property>/systems/acconfig/options/sound/mechanical-volume</property>
-			</product>
-		</expression>
+		<value>1</value>
     </input>
 	<input>
 		<condition>
 			<and>
 				<not>
-					<property>/sim/sound/wingview-aft</property>
+					<property>sim/sound/wingview-aft</property>
 				</not>
 				<not>
-					<property>/sim/sound/wingview-fwd</property>
+					<property>sim/sound/wingview-fwd</property>
 				</not>
 			</and>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-		<prop>/sim/sound/other/flaps</prop>
+		<prop>sim/sound/other/flaps</prop>
     </output>
 </filter>
 
@@ -709,7 +707,7 @@
     <gain>1</gain>
     <input>
 		<condition>
-			<property>/sim/sound/internal-custom</property>
+			<property>sim/sound/internal-custom</property>
 		</condition>
 		<expression>
 			<table>
@@ -724,12 +722,12 @@
     </input>
 	<input>
 		<condition>
-			<not><property>/sim/sound/internal-custom</property></not>
+			<not><property>sim/sound/internal-custom</property></not>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-		<prop>/sim/sound/other/rollp</prop>
+		<prop>sim/sound/other/rollp</prop>
     </output>
 </filter>
 
@@ -738,24 +736,23 @@
     <gain>1</gain>
     <input>
 		<condition>
-			<property>/sim/sound/internal-custom</property>
+			<property>sim/sound/internal-custom</property>
 		</condition>
 		<expression>
 			<product>
 				<property>/systems/pneumatic/pack-psi</property>
-				<property>/systems/acconfig/options/sound/effects-volume</property>
 				<value>0.025</value>
 			</product>
 		</expression> 
     </input>
 	<input>
 		<condition>
-			<not><property>/sim/sound/internal-custom</property></not>
+			<not><property>sim/sound/internal-custom</property></not>
 		</condition>
 		<value>0</value>
 	</input>
     <output>
-		<prop>/sim/sound/other/air-con</prop>
+		<prop>sim/sound/other/air-con</prop>
     </output>
 </filter>
 
@@ -785,7 +782,7 @@
 		<value>0</value>
     </input>
     <output>
-		<prop>/sim/sound/wingview-fwd</prop>
+		<prop>sim/sound/wingview-fwd</prop>
     </output>
 </filter>
 
@@ -827,7 +824,7 @@
 		<value>0</value>
     </input>
     <output>
-		<prop>/sim/sound/wingview-aft</prop>
+		<prop>sim/sound/wingview-aft</prop>
     </output>
 </filter>
 
@@ -838,7 +835,7 @@
 		<condition>
 			<or>
 				<equals>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -860,7 +857,7 @@
 	<input>
 		<condition>
 			<and>
-				<not><property>/sim/current-view/internal</property></not>
+				<not><property>sim/current-view/internal</property></not>
 				<not>
 					<equals>
 						<property>/sim/current-view/view-number</property>
@@ -884,7 +881,7 @@
 		<value>0</value>
     </input>
     <output>
-		<prop>/sim/sound/internal-custom</prop>
+		<prop>sim/sound/internal-custom</prop>
     </output>
 </filter>
 </PropertyList>
